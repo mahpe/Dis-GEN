@@ -1,0 +1,2074 @@
+X: (9017, 24, 182)
+Y: (9017, 236)
+Train: (6491, 24, 182) (6491, 236)
+Val: (722, 24, 182) (722, 236)
+Test: (1804, 24, 182) (1804, 236)
+X: torch.Size([32, 24, 182])
+X2: torch.Size([32, 236])
+En0: torch.Size([32, 64, 90])
+En1: torch.Size([32, 128, 30])
+En2: torch.Size([32, 256, 15])
+En3: torch.Size([32, 3840])
+En4: torch.Size([32, 1024])
+---------------------------------
+Cry0: torch.Size([32, 256])
+Cry1: torch.Size([32, 128])
+---------------------------------
+Latent indput torch.Size([32, 1152])
+Z mean torch.Size([32, 256]) Z_std torch.Size([32, 256])
+---------------------------------
+Z: torch.Size([32, 256])
+Crystal Features: torch.Size([32, 236])
+Decoded SG: torch.Size([32, 230])
+Decoded Lattice: torch.Size([32, 6])
+---------------------------------
+Dec0: torch.Size([32, 3840])
+Dec1: torch.Size([32, 256, 15])
+Dec2: torch.Size([32, 128, 30])
+Dec3: torch.Size([32, 64, 90])
+Dec4: torch.Size([32, 24, 182])
+Element: torch.Size([32, 24, 101])
+Wyckoff Multiplier: torch.Size([32, 24, 51])
+Frac Coords: torch.Size([32, 24, 3])
+Wyckoff Letter: torch.Size([32, 24, 27])
+Original: torch.Size([32, 24, 182])
+Reconstructed: torch.Size([32, 24, 101]) torch.Size([32, 24, 51]) torch.Size([32, 24, 3]) torch.Size([32, 24, 27])
+Z mean: torch.Size([32, 256])
+Z log var: torch.Size([32, 256])
+Coeffs: {'kl': 1000.0, 'element': 200.0, 'wyckoff_letter': 1.0, 'wyckoff_multiplier': 1.0, 'frac_coords': 1.0, 'space_group': 10.0, 'lattice': 3.0}
+---------------------------------
+KL Loss i: torch.Size([32, 256])
+KL Loss: torch.Size([])
+Element Loss i: torch.Size([24, 32])
+Element Loss: torch.Size([])
+Wyckoff Loss i: torch.Size([24, 32])
+Wyckoff Loss: torch.Size([])
+Wyckoff Multiplier Loss i: torch.Size([24, 32])
+Wyckoff Multiplier Loss: torch.Size([])
+Frac Coords Loss i: torch.Size([32, 24])
+Frac Coords Loss: torch.Size([])
+Space Group Loss i: torch.Size([32])
+Space Group Loss: torch.Size([])
+Lattice Loss i: torch.Size([32, 6])
+Lattice Loss: torch.Size([])
+Total Loss: torch.Size([])
+---------------------------------
+element: 46.59840774536133
+wyckoff_letter: 84.53142342716455
+wyckoff_multiplier: 92.68778991699219
+frac_coords: 5.000524520874023
+space_group: 55.10271072387695
+lattice: 14.545948028564453
+total: 298.4668043628335
+Epoch 1/200: Train Loss: 52.781014243438555
+---------------------------------
+Validation Loss:
+element: 5.24582174549932
+wyckoff_letter: 5.704515115368307
+wyckoff_multiplier: 3.5966803509256113
+frac_coords: 0.5459316087805707
+space_group: 5.247617638629416
+lattice: 1.3995414402173914
+total: 21.7401075845526
+Model saved
+Epoch 2/200: Train Loss: 16.88416718587876
+---------------------------------
+Validation Loss:
+element: 4.206524061120075
+wyckoff_letter: 3.7684045370785224
+wyckoff_multiplier: 2.5144577026367188
+frac_coords: 0.44414764901866083
+space_group: 2.9858769955842392
+lattice: 0.9513346630594005
+total: 14.870745679764038
+Model saved
+Epoch 3/200: Train Loss: 11.91486179237246
+---------------------------------
+Validation Loss:
+element: 3.8066582057787026
+wyckoff_letter: 2.8773109397222387
+wyckoff_multiplier: 1.960827868917714
+frac_coords: 0.3929381992505944
+space_group: 2.2904762599779214
+lattice: 0.6871603260869565
+total: 12.015371784509027
+Model saved
+Epoch 4/200: Train Loss: 9.496503074511331
+---------------------------------
+Validation Loss:
+element: 3.472874185313349
+wyckoff_letter: 2.7708628368808217
+wyckoff_multiplier: 1.8928615735924763
+frac_coords: 0.3825630934342094
+space_group: 2.1227561287257983
+lattice: 0.9907875061035156
+total: 11.632705391105397
+Model saved
+Epoch 5/200: Train Loss: 8.638180290454097
+---------------------------------
+Validation Loss:
+element: 3.324717314346977
+wyckoff_letter: 2.572892584653864
+wyckoff_multiplier: 1.681988923445992
+frac_coords: 0.38870446578316065
+space_group: 2.5073645218558935
+lattice: 1.0158805017885955
+total: 11.491548639376092
+Model saved
+Epoch 6/200: Train Loss: 6.857599627785258
+---------------------------------
+Validation Loss:
+element: 2.940005095108696
+wyckoff_letter: 2.2918121896808232
+wyckoff_multiplier: 1.53723376730214
+frac_coords: 0.34627302833225415
+space_group: 2.4397680863090185
+lattice: 0.49252232261326
+total: 10.047614831263056
+Model saved
+Epoch 7/200: Train Loss: 5.960286462842698
+---------------------------------
+Validation Loss:
+element: 2.7396956734035327
+wyckoff_letter: 2.1725987727451908
+wyckoff_multiplier: 1.358969895736031
+frac_coords: 0.3494076521500297
+space_group: 2.613037109375
+lattice: 0.6181360327679178
+total: 9.851844683473946
+Model saved
+Epoch 8/200: Train Loss: 5.090574022745892
+---------------------------------
+Validation Loss:
+element: 2.5326645892599355
+wyckoff_letter: 2.1241363513333185
+wyckoff_multiplier: 1.27399029939071
+frac_coords: 0.3619724771250849
+space_group: 2.004712975543478
+lattice: 1.8846730771272078
+total: 10.18214952840522
+Epoch 9/200: Train Loss: 5.790196963277278
+---------------------------------
+Validation Loss:
+element: 2.5882118888523267
+wyckoff_letter: 2.1401872689600876
+wyckoff_multiplier: 1.4414498702339504
+frac_coords: 0.3788193412449049
+space_group: 2.910071663234545
+lattice: 0.5377867325492527
+total: 9.996526989888238
+Epoch 10/200: Train Loss: 8.395987495370745
+---------------------------------
+Validation Loss:
+element: 2.459526891293733
+wyckoff_letter: 2.1184724419752983
+wyckoff_multiplier: 1.3342331596042798
+frac_coords: 0.3712625918181046
+space_group: 2.772447668987772
+lattice: 0.7755062269127887
+total: 9.831449158758035
+Model saved
+Epoch 11/200: Train Loss: 4.992878785501468
+---------------------------------
+Validation Loss:
+element: 2.240856834079908
+wyckoff_letter: 1.9491570093023192
+wyckoff_multiplier: 1.2098008860712466
+frac_coords: 0.33756612694781757
+space_group: 2.191887731137483
+lattice: 0.4671667347783628
+total: 8.396435019920746
+Model saved
+Epoch 12/200: Train Loss: 3.4553434045043474
+---------------------------------
+Validation Loss:
+element: 1.994641179623811
+wyckoff_letter: 1.815921565582526
+wyckoff_multiplier: 1.0773975538170857
+frac_coords: 0.32655606062515924
+space_group: 2.30254430356233
+lattice: 0.21378222755763843
+total: 7.730842963350972
+Model saved
+Epoch 13/200: Train Loss: 2.7897362485263044
+---------------------------------
+Validation Loss:
+element: 1.8980061074961787
+wyckoff_letter: 1.861090097245368
+wyckoff_multiplier: 1.1108349509861157
+frac_coords: 0.3220826024594514
+space_group: 2.1767898227857505
+lattice: 0.20591717180998428
+total: 7.574721063004374
+Model saved
+Epoch 14/200: Train Loss: 2.4639884173822484
+---------------------------------
+Validation Loss:
+element: 1.9152455537215523
+wyckoff_letter: 1.9603088564866689
+wyckoff_multiplier: 1.1778025419815727
+frac_coords: 0.3300424866054369
+space_group: 2.413913229237432
+lattice: 0.1692232774651569
+total: 7.966535952442247
+Epoch 15/200: Train Loss: 2.3716909852052335
+---------------------------------
+Validation Loss:
+element: 1.899346393087636
+wyckoff_letter: 1.9080674789467016
+wyckoff_multiplier: 1.149418540622877
+frac_coords: 0.3200506749360458
+space_group: 2.362755651059358
+lattice: 0.3026306525520656
+total: 7.942269562628775
+Epoch 16/200: Train Loss: 2.4569795479008487
+---------------------------------
+Validation Loss:
+element: 1.9691550213357676
+wyckoff_letter: 1.9186226772642114
+wyckoff_multiplier: 1.1549484418786091
+frac_coords: 0.319868336553159
+space_group: 2.360057664954144
+lattice: 0.2701154791790506
+total: 7.992767596707601
+Epoch 17/200: Train Loss: 2.2420238352371578
+---------------------------------
+Validation Loss:
+element: 1.8400094405464504
+wyckoff_letter: 2.0840123201747986
+wyckoff_multiplier: 1.1282261558201
+frac_coords: 0.31721193894096045
+space_group: 2.4352616019870923
+lattice: 0.2682229539622431
+total: 8.072944608456982
+Epoch 18/200: Train Loss: 716.8229043150744
+---------------------------------
+Validation Loss:
+element: 3.588220679241678
+wyckoff_letter: 2.626318417085435
+wyckoff_multiplier: 1.6613817629606829
+frac_coords: 0.3882456240446671
+space_group: 2.3390828008237095
+lattice: 1.33050595159116
+total: 11.933754832282194
+Epoch 19/200: Train Loss: 9.778177026912742
+---------------------------------
+Validation Loss:
+element: 2.990053923233696
+wyckoff_letter: 2.2978792211543033
+wyckoff_multiplier: 1.4360189023225203
+frac_coords: 0.360162817913553
+space_group: 2.4167022705078125
+lattice: 0.6404521776282269
+total: 10.141269178973598
+Epoch 20/200: Train Loss: 4.913148204763132
+---------------------------------
+Validation Loss:
+element: 2.601190981657609
+wyckoff_letter: 2.1274215764423867
+wyckoff_multiplier: 1.2138494408648948
+frac_coords: 0.34435498196145764
+space_group: 2.1512670102326767
+lattice: 0.3768531550531802
+total: 8.814936913138608
+Epoch 21/200: Train Loss: 3.5684766536157473
+---------------------------------
+Validation Loss:
+element: 2.3217236062754756
+wyckoff_letter: 1.9934995413390124
+wyckoff_multiplier: 1.1920045769732932
+frac_coords: 0.3283333156419837
+space_group: 2.2351057633109717
+lattice: 0.2854472657908564
+total: 8.356114093950902
+Epoch 22/200: Train Loss: 2.951098603092324
+---------------------------------
+Validation Loss:
+element: 2.225896420686141
+wyckoff_letter: 2.0353778588539577
+wyckoff_multiplier: 1.2341163469397503
+frac_coords: 0.32653128582498303
+space_group: 2.1465493907099185
+lattice: 0.26622855144998303
+total: 8.234700201807561
+Epoch 23/200: Train Loss: 2.564141304930779
+---------------------------------
+Validation Loss:
+element: 2.0742869169815727
+wyckoff_letter: 1.954983895750211
+wyckoff_multiplier: 1.1413073332413384
+frac_coords: 0.32074393396792206
+space_group: 2.164945187775985
+lattice: 0.22806772978409476
+total: 7.884334778599827
+Epoch 24/200: Train Loss: 2.30671983949517
+---------------------------------
+Validation Loss:
+element: 2.0497590769892153
+wyckoff_letter: 2.207962334860008
+wyckoff_multiplier: 1.299071850983993
+frac_coords: 0.3329949378967285
+space_group: 2.140749724014946
+lattice: 0.2482522674228834
+total: 8.278790577249413
+Epoch 25/200: Train Loss: 2.2022684705502513
+---------------------------------
+Validation Loss:
+element: 2.0451786207116167
+wyckoff_letter: 2.2067380185347854
+wyckoff_multiplier: 1.324064835258152
+frac_coords: 0.3286888703056004
+space_group: 2.0909259630286177
+lattice: 0.2301304236702297
+total: 8.225726657610581
+Epoch 26/200: Train Loss: 2.035278978282296
+---------------------------------
+Validation Loss:
+element: 1.9804447008215862
+wyckoff_letter: 2.200823528089051
+wyckoff_multiplier: 1.331718278967816
+frac_coords: 0.3213837872380796
+space_group: 2.253153759500255
+lattice: 0.20027685165405273
+total: 8.287800876124333
+Epoch 27/200: Train Loss: 1.9628701087272253
+---------------------------------
+Validation Loss:
+element: 1.8580637392790422
+wyckoff_letter: 2.283478837533937
+wyckoff_multiplier: 1.3395450426184612
+frac_coords: 0.3242755765500276
+space_group: 2.1938879593558935
+lattice: 0.2259539106617803
+total: 8.22520511552121
+Epoch 28/200: Train Loss: 1.9009075067049293
+---------------------------------
+Validation Loss:
+element: 2.009375862453295
+wyckoff_letter: 2.426156711023245
+wyckoff_multiplier: 1.4039028001868206
+frac_coords: 0.32790140483690344
+space_group: 2.3380785403044326
+lattice: 0.2674607815949813
+total: 8.772875887288778
+Epoch 29/200: Train Loss: 2.0680936542805095
+---------------------------------
+Validation Loss:
+element: 2.091149205746858
+wyckoff_letter: 2.5951687848596223
+wyckoff_multiplier: 1.6442002006199048
+frac_coords: 0.3277878346650497
+space_group: 2.372681659200917
+lattice: 0.33460838898368506
+total: 9.365595804073473
+Epoch 30/200: Train Loss: 1.9604102846259235
+---------------------------------
+Validation Loss:
+element: 1.8206118708071501
+wyckoff_letter: 2.2181945629006727
+wyckoff_multiplier: 1.356541343357252
+frac_coords: 0.31325468809708307
+space_group: 2.239542919656505
+lattice: 0.28251888441002887
+total: 8.230664595049872
+Epoch 31/200: Train Loss: 1.7200094594901962
+---------------------------------
+Validation Loss:
+element: 1.8926416480022927
+wyckoff_letter: 2.222522115289496
+wyckoff_multiplier: 1.4907098853069802
+frac_coords: 0.33277225494384766
+space_group: 2.2602718187415083
+lattice: 0.30866844757743506
+total: 8.5075864053242
+Epoch 32/200: Train Loss: 1.8457743779596305
+---------------------------------
+Validation Loss:
+element: 1.7789336494777515
+wyckoff_letter: 2.3711942680032574
+wyckoff_multiplier: 1.423396400783373
+frac_coords: 0.32386481243631116
+space_group: 2.2834091186523438
+lattice: 0.6176720909450365
+total: 8.79847015486365
+Epoch 33/200: Train Loss: 2.899708125141512
+---------------------------------
+Validation Loss:
+element: 3.0411572663680366
+wyckoff_letter: 4.028200287370002
+wyckoff_multiplier: 3.1695029217263926
+frac_coords: 0.39649644105330756
+space_group: 2.762914408808169
+lattice: 1.0001441292140796
+total: 14.398415902951559
+Epoch 34/200: Train Loss: 4.529136533011046
+---------------------------------
+Validation Loss:
+element: 2.0894206503163213
+wyckoff_letter: 2.321345356555503
+wyckoff_multiplier: 1.5461755835491677
+frac_coords: 0.3592609737230384
+space_group: 2.737577023713485
+lattice: 0.627905099288277
+total: 9.68168460778091
+Epoch 35/200: Train Loss: 2.3433460069010064
+---------------------------------
+Validation Loss:
+element: 1.7980419656504756
+wyckoff_letter: 2.163267689124821
+wyckoff_multiplier: 1.333211732947308
+frac_coords: 0.33022130053976306
+space_group: 2.4113582113514775
+lattice: 0.43187058490255603
+total: 8.46797113640422
+Epoch 36/200: Train Loss: 1.6018515257219867
+---------------------------------
+Validation Loss:
+element: 1.713354027789572
+wyckoff_letter: 2.1888754953767604
+wyckoff_multiplier: 1.2934921928074048
+frac_coords: 0.3080371151799741
+space_group: 2.3286872532056724
+lattice: 0.2242771231609842
+total: 8.056723032553199
+Epoch 37/200: Train Loss: 1.2734193114823273
+---------------------------------
+Validation Loss:
+element: 1.652005900507388
+wyckoff_letter: 2.156097719717672
+wyckoff_multiplier: 1.2539727584175442
+frac_coords: 0.3024731511655061
+space_group: 2.1266656958538555
+lattice: 0.19412075954934824
+total: 7.685335914481413
+Epoch 38/200: Train Loss: 1.1132526132352316
+---------------------------------
+Validation Loss:
+element: 1.6046537316363791
+wyckoff_letter: 2.152317634979
+wyckoff_multiplier: 1.2691823710565981
+frac_coords: 0.29956224690312927
+space_group: 2.102576546047045
+lattice: 0.15694336269212805
+total: 7.585235862727418
+Epoch 39/200: Train Loss: 1.1591024279232185
+---------------------------------
+Validation Loss:
+element: 1.6149784585703975
+wyckoff_letter: 2.2326986199384087
+wyckoff_multiplier: 1.3587478969408118
+frac_coords: 0.3027381482331649
+space_group: 2.027878305186396
+lattice: 0.24894453131634256
+total: 7.785985635639851
+Epoch 40/200: Train Loss: 1.1504589228672941
+---------------------------------
+Validation Loss:
+element: 1.6322391344153362
+wyckoff_letter: 2.111387168502724
+wyckoff_multiplier: 1.376645793085513
+frac_coords: 0.2997859042623769
+space_group: 2.1451004691745923
+lattice: 0.15849016023718793
+total: 7.723648667497527
+Epoch 41/200: Train Loss: 1.2708104748078741
+---------------------------------
+Validation Loss:
+element: 1.7820842577063518
+wyckoff_letter: 2.2176704055443013
+wyckoff_multiplier: 1.5137765303902004
+frac_coords: 0.30860620996226434
+space_group: 2.1538533749787705
+lattice: 0.21444646171901538
+total: 8.1904371644791
+Epoch 42/200: Train Loss: 1.4251222282390983
+---------------------------------
+Validation Loss:
+element: 1.8122382785962976
+wyckoff_letter: 2.424874538459422
+wyckoff_multiplier: 1.552422399106233
+frac_coords: 0.3120554011801015
+space_group: 2.1653087450110395
+lattice: 0.20114788801773734
+total: 8.468047152197283
+Epoch 43/200: Train Loss: 1.7996005286596124
+---------------------------------
+Validation Loss:
+element: 1.8533930571182915
+wyckoff_letter: 2.508515416681586
+wyckoff_multiplier: 1.5649560016134512
+frac_coords: 0.32031075850777
+space_group: 2.3696398527725884
+lattice: 0.26495531330937927
+total: 8.881770570090914
+Epoch 44/200: Train Loss: 1.5872863697307107
+---------------------------------
+Validation Loss:
+element: 1.7219978000806726
+wyckoff_letter: 2.4152439025199715
+wyckoff_multiplier: 1.3879001451575237
+frac_coords: 0.31416175676428754
+space_group: 2.256374524987262
+lattice: 0.18471460757048233
+total: 8.280392618204973
+Epoch 45/200: Train Loss: 1.2607636883877937
+---------------------------------
+Validation Loss:
+element: 1.6453082872473674
+wyckoff_letter: 2.2757151036224688
+wyckoff_multiplier: 1.375283365664275
+frac_coords: 0.29908323287963867
+space_group: 2.240144646686056
+lattice: 0.1664911249409551
+total: 8.002026002607618
+Epoch 46/200: Train Loss: 1.2673415369412802
+---------------------------------
+Validation Loss:
+element: 1.6340721793796704
+wyckoff_letter: 2.304174825107316
+wyckoff_multiplier: 1.4026456086531929
+frac_coords: 0.2996598533962084
+space_group: 2.232815120531165
+lattice: 0.19096013774042545
+total: 8.064327841830684
+Epoch 47/200: Train Loss: 1.2349220652708193
+---------------------------------
+Validation Loss:
+element: 1.6581027818762737
+wyckoff_letter: 2.2864486358213734
+wyckoff_multiplier: 1.4157303519870923
+frac_coords: 0.2991129211757494
+space_group: 2.2703678296959917
+lattice: 0.4115600171296493
+total: 8.341322693217
+Epoch 48/200: Train Loss: 1.2575240740950135
+---------------------------------
+Validation Loss:
+element: 1.6016963461171025
+wyckoff_letter: 2.462058523208123
+wyckoff_multiplier: 1.4076861505923064
+frac_coords: 0.29033148807028064
+space_group: 2.0139005909795347
+lattice: 0.17081092751544455
+total: 7.946484132491596
+Epoch 49/200: Train Loss: 1.3402658695163998
+---------------------------------
+Validation Loss:
+element: 1.84161725251571
+wyckoff_letter: 2.4984889488079616
+wyckoff_multiplier: 1.6362770743992017
+frac_coords: 0.31469255944956903
+space_group: 2.2768773617951767
+lattice: 0.18804550170898438
+total: 8.75599854604093
+Epoch 50/200: Train Loss: 4.084528249512704
+---------------------------------
+Validation Loss:
+element: 2.1721582827360733
+wyckoff_letter: 2.9641516748997954
+wyckoff_multiplier: 1.966361667798913
+frac_coords: 0.3662002812261167
+space_group: 3.635508329971977
+lattice: 0.9956834212593411
+total: 12.100063542084278
+Epoch 51/200: Train Loss: 3.1694880418960154
+---------------------------------
+Validation Loss:
+element: 1.7948548690132473
+wyckoff_letter: 2.3809010997410653
+wyckoff_multiplier: 1.7431612429411516
+frac_coords: 0.3291621208190918
+space_group: 2.931895048721977
+lattice: 0.6543986279031505
+total: 9.834372816072465
+Epoch 52/200: Train Loss: 2.5013637934021045
+---------------------------------
+Validation Loss:
+element: 1.7400970458984375
+wyckoff_letter: 2.3397180819781314
+wyckoff_multiplier: 1.451787865680197
+frac_coords: 0.32574191300765326
+space_group: 2.4296790413234546
+lattice: 0.35633904000987177
+total: 8.643362650237636
+Epoch 53/200: Train Loss: 1.4330107024241332
+---------------------------------
+Validation Loss:
+element: 1.5933355248492698
+wyckoff_letter: 2.190835621215771
+wyckoff_multiplier: 1.3259298075800356
+frac_coords: 0.3003421866375467
+space_group: 2.680997268013332
+lattice: 0.23369088380233102
+total: 8.325131499127119
+Epoch 54/200: Train Loss: 1.0687781396197584
+---------------------------------
+Validation Loss:
+element: 1.550117824388587
+wyckoff_letter: 2.1507600063338264
+wyckoff_multiplier: 1.2727345176365064
+frac_coords: 0.2975469464841096
+space_group: 2.349380824876868
+lattice: 0.17391866186390753
+total: 7.794458852999545
+Epoch 55/200: Train Loss: 0.8419027188464774
+---------------------------------
+Validation Loss:
+element: 1.4866643159285835
+wyckoff_letter: 2.1802951942027504
+wyckoff_multiplier: 1.293183534041695
+frac_coords: 0.29449885824452277
+space_group: 2.3255983435589336
+lattice: 0.14473972113236136
+total: 7.72497997807593
+Epoch 56/200: Train Loss: 0.8640673129480358
+---------------------------------
+Validation Loss:
+element: 1.5307308694590693
+wyckoff_letter: 2.160614639950544
+wyckoff_multiplier: 1.3652639803679094
+frac_coords: 0.28804256605065387
+space_group: 2.369174459706182
+lattice: 0.233359316120977
+total: 7.947185689446428
+Epoch 57/200: Train Loss: 0.8018297642841866
+---------------------------------
+Validation Loss:
+element: 1.5225057187287703
+wyckoff_letter: 2.292687399989344
+wyckoff_multiplier: 1.3490816199261209
+frac_coords: 0.2782919717871625
+space_group: 2.3140940458878227
+lattice: 0.10587329449860947
+total: 7.862534034383025
+Epoch 58/200: Train Loss: 0.759949682268092
+---------------------------------
+Validation Loss:
+element: 1.4739046511442766
+wyckoff_letter: 2.1940236631611914
+wyckoff_multiplier: 1.3538799285888672
+frac_coords: 0.2673533688420835
+space_group: 2.4028018453846807
+lattice: 0.11514496803283691
+total: 7.807108138453367
+Epoch 59/200: Train Loss: 0.752668684867543
+---------------------------------
+Validation Loss:
+element: 1.5047269074813179
+wyckoff_letter: 2.2687020113169196
+wyckoff_multiplier: 1.4318197499150815
+frac_coords: 0.2760622397713039
+space_group: 2.2892051365064536
+lattice: 0.14362776797750723
+total: 7.914144269898722
+Epoch 60/200: Train Loss: 0.8047969899489822
+---------------------------------
+Validation Loss:
+element: 1.5374543563179348
+wyckoff_letter: 2.330133158939189
+wyckoff_multiplier: 1.4169600113578464
+frac_coords: 0.2683883542599885
+space_group: 2.315881480341372
+lattice: 0.26318825846133026
+total: 8.132005589207216
+Epoch 61/200: Train Loss: 0.9217971636514409
+---------------------------------
+Validation Loss:
+element: 1.5575092149817424
+wyckoff_letter: 2.42673891245158
+wyckoff_multiplier: 1.5294680388077446
+frac_coords: 0.2860207764998726
+space_group: 2.3706273617951767
+lattice: 0.11764141787653384
+total: 8.28800554582073
+Epoch 62/200: Train Loss: 1.2508833593810091
+---------------------------------
+Validation Loss:
+element: 1.6612499071204143
+wyckoff_letter: 2.370201035757059
+wyckoff_multiplier: 1.6646599147630774
+frac_coords: 0.302611433941385
+space_group: 2.3405131464419155
+lattice: 0.27188350843346637
+total: 8.611119372982811
+Epoch 63/200: Train Loss: 1.7767574519817928
+---------------------------------
+Validation Loss:
+element: 1.7408608146335767
+wyckoff_letter: 2.6377988693908008
+wyckoff_multiplier: 1.7410608374554177
+frac_coords: 0.3108187965724779
+space_group: 2.351703975511634
+lattice: 0.46261198624320654
+total: 9.244855473987869
+Epoch 64/200: Train Loss: 1.71028758442663
+---------------------------------
+Validation Loss:
+element: 1.677161506984545
+wyckoff_letter: 2.5766698311529033
+wyckoff_multiplier: 1.5647760474163552
+frac_coords: 0.30233754282412323
+space_group: 2.437902699346128
+lattice: 0.21318276032157565
+total: 8.772030167939688
+Epoch 65/200: Train Loss: 1.1429410172807242
+---------------------------------
+Validation Loss:
+element: 1.5610582102899966
+wyckoff_letter: 2.3661092633376275
+wyckoff_multiplier: 1.4844036931576936
+frac_coords: 0.29118301557457965
+space_group: 2.4628446827764097
+lattice: 0.1773008263629416
+total: 8.342899536752915
+Epoch 66/200: Train Loss: 0.9204692028903702
+---------------------------------
+Validation Loss:
+element: 1.5055538675059443
+wyckoff_letter: 2.3111372866201223
+wyckoff_multiplier: 1.5175809445588484
+frac_coords: 0.2756964642068614
+space_group: 2.386534649392833
+lattice: 0.11576814236848251
+total: 8.112271065553353
+Epoch 67/200: Train Loss: 0.7894330513199271
+---------------------------------
+Validation Loss:
+element: 1.471046779466712
+wyckoff_letter: 2.2279697884437155
+wyckoff_multiplier: 1.4339219798212466
+frac_coords: 0.28191471099853516
+space_group: 2.2708813211192256
+lattice: 0.15382551110309103
+total: 7.839560081983484
+Epoch 68/200: Train Loss: 0.7676113355534182
+---------------------------------
+Validation Loss:
+element: 1.4944540936013926
+wyckoff_letter: 2.3723967366096743
+wyckoff_multiplier: 1.4035755655039912
+frac_coords: 0.27764403301736584
+space_group: 2.2762018286663555
+lattice: 0.16094543622887653
+total: 7.985217634417811
+Epoch 69/200: Train Loss: 0.8400989754392437
+---------------------------------
+Validation Loss:
+element: 1.4452224399732507
+wyckoff_letter: 2.404303949952788
+wyckoff_multiplier: 1.487135182256284
+frac_coords: 0.2739469072093134
+space_group: 2.343414306640625
+lattice: 0.15064529750658118
+total: 8.104668142763872
+Epoch 70/200: Train Loss: 0.8150000738719941
+---------------------------------
+Validation Loss:
+element: 1.4912434453549592
+wyckoff_letter: 2.4057300824614627
+wyckoff_multiplier: 1.4777870178222656
+frac_coords: 0.2655148920805558
+space_group: 2.2947102422299595
+lattice: 0.11237772651340651
+total: 8.047363363874847
+Epoch 71/200: Train Loss: 0.8813918513759881
+---------------------------------
+Validation Loss:
+element: 1.6047141033670176
+wyckoff_letter: 2.553989283416914
+wyckoff_multiplier: 1.4750246794327446
+frac_coords: 0.27289168731026026
+space_group: 2.4706938370414404
+lattice: 0.1474052719447924
+total: 8.524718438558937
+Epoch 72/200: Train Loss: 1.0155067618066937
+---------------------------------
+Validation Loss:
+element: 1.5577905074409817
+wyckoff_letter: 2.5743354418622664
+wyckoff_multiplier: 1.6043668000594429
+frac_coords: 0.28543770831564197
+space_group: 2.33082447881284
+lattice: 0.23749701873115872
+total: 8.590251871150222
+Epoch 73/200: Train Loss: 5.418579160769309
+---------------------------------
+Validation Loss:
+element: 1.9229223831840183
+wyckoff_letter: 2.5868955708460275
+wyckoff_multiplier: 1.6331014218537703
+frac_coords: 0.33691677839859674
+space_group: 4.2400960507600205
+lattice: 0.8847320390784222
+total: 11.604664358390083
+Epoch 74/200: Train Loss: 2.816663236628173
+---------------------------------
+Validation Loss:
+element: 1.6954783564028533
+wyckoff_letter: 2.279755264811551
+wyckoff_multiplier: 1.4785131371539573
+frac_coords: 0.32650358780570654
+space_group: 3.5703728717306387
+lattice: 0.4589324619459069
+total: 9.809555108499397
+Epoch 75/200: Train Loss: 1.637216145698658
+---------------------------------
+Validation Loss:
+element: 1.5676908078400984
+wyckoff_letter: 2.311794182148146
+wyckoff_multiplier: 1.482190173605214
+frac_coords: 0.3085900182309358
+space_group: 3.226700160814368
+lattice: 0.7136180711829144
+total: 9.610583690464976
+Epoch 76/200: Train Loss: 1.1540924387007974
+---------------------------------
+Validation Loss:
+element: 1.5084361200747283
+wyckoff_letter: 2.155503440805085
+wyckoff_multiplier: 1.3680105623991594
+frac_coords: 0.2891608321148416
+space_group: 2.517963741136634
+lattice: 0.21438362287438434
+total: 8.05345795910447
+Epoch 77/200: Train Loss: 0.8266971211340269
+---------------------------------
+Validation Loss:
+element: 1.4503110802691916
+wyckoff_letter: 2.1749699207048336
+wyckoff_multiplier: 1.333151278288468
+frac_coords: 0.27461331823597784
+space_group: 2.408654917841372
+lattice: 0.14546043976493503
+total: 7.787161239226495
+Epoch 78/200: Train Loss: 0.6670219801632776
+---------------------------------
+Validation Loss:
+element: 1.4190280748450237
+wyckoff_letter: 2.1441918122153907
+wyckoff_multiplier: 1.289363197658373
+frac_coords: 0.2653330305348272
+space_group: 2.4198115804921025
+lattice: 0.10445690155029297
+total: 7.642184590359177
+Epoch 79/200: Train Loss: 0.6739114699377278
+---------------------------------
+Validation Loss:
+element: 1.4213790893554688
+wyckoff_letter: 2.1817114403833484
+wyckoff_multiplier: 1.3110422880753227
+frac_coords: 0.25977157509845233
+space_group: 2.2196230681046196
+lattice: 0.1731189022893491
+total: 7.566646629597752
+Model saved
+Epoch 80/200: Train Loss: 0.842372799245091
+---------------------------------
+Validation Loss:
+element: 1.4686465056046196
+wyckoff_letter: 2.2391601060717714
+wyckoff_multiplier: 1.3457802482273267
+frac_coords: 0.26714959351912787
+space_group: 2.3763817496921704
+lattice: 0.0919122488602348
+total: 7.789030651935017
+Epoch 81/200: Train Loss: 0.6555119649988121
+---------------------------------
+Validation Loss:
+element: 1.470512224280316
+wyckoff_letter: 2.3451820954714777
+wyckoff_multiplier: 1.363221541694973
+frac_coords: 0.267480352650518
+space_group: 2.637407385784647
+lattice: 0.1273188072702159
+total: 8.21112250567241
+Epoch 82/200: Train Loss: 0.6538635978436975
+---------------------------------
+Validation Loss:
+element: 1.4174784784731658
+wyckoff_letter: 2.251988133065978
+wyckoff_multiplier: 1.3373794555664062
+frac_coords: 0.2550596568895423
+space_group: 2.5400675898012905
+lattice: 0.11958041398421577
+total: 7.921553423384902
+Epoch 83/200: Train Loss: 0.5765013872575799
+---------------------------------
+Validation Loss:
+element: 1.3834508812945823
+wyckoff_letter: 2.2976807193567295
+wyckoff_multiplier: 1.3328069603961448
+frac_coords: 0.2457567090573518
+space_group: 2.4247980532438858
+lattice: 0.12243082212365192
+total: 7.806924301552392
+Epoch 84/200: Train Loss: 0.5447913053027709
+---------------------------------
+Validation Loss:
+element: 1.3772118609884512
+wyckoff_letter: 2.3073068291887444
+wyckoff_multiplier: 1.3924726403277854
+frac_coords: 0.24509487981381622
+space_group: 2.405203611954399
+lattice: 0.06939793669659158
+total: 7.796687716174504
+Epoch 85/200: Train Loss: 0.9119263253909742
+---------------------------------
+Validation Loss:
+element: 1.4749644735585088
+wyckoff_letter: 2.3766865039385596
+wyckoff_multiplier: 1.4699383611264436
+frac_coords: 0.26764960910962976
+space_group: 2.661312600840693
+lattice: 0.13354672556338104
+total: 8.384098569239935
+Epoch 86/200: Train Loss: 0.7842328238797949
+---------------------------------
+Validation Loss:
+element: 1.4433869071628735
+wyckoff_letter: 2.3788123246737602
+wyckoff_multiplier: 1.4748623060143513
+frac_coords: 0.26440804937611456
+space_group: 2.589816715406335
+lattice: 0.1071026843527089
+total: 8.258389023155877
+Epoch 87/200: Train Loss: 0.7289331174777697
+---------------------------------
+Validation Loss:
+element: 1.4375018244204314
+wyckoff_letter: 2.4549786353575818
+wyckoff_multiplier: 1.4247826285984204
+frac_coords: 0.26464669600777
+space_group: 2.5088597173276157
+lattice: 0.10148384260094684
+total: 8.192253294417412
+Epoch 88/200: Train Loss: 0.6969407228814184
+---------------------------------
+Validation Loss:
+element: 1.4768398119055706
+wyckoff_letter: 2.5429104624658123
+wyckoff_multiplier: 1.5329904970915422
+frac_coords: 0.2559332847595215
+space_group: 2.392650438391644
+lattice: 0.11578042610831883
+total: 8.317104540611197
+Epoch 89/200: Train Loss: 0.7149099167731323
+---------------------------------
+Validation Loss:
+element: 1.4450358515200408
+wyckoff_letter: 2.4408519249761085
+wyckoff_multiplier: 1.4437690403150476
+frac_coords: 0.27204658674157184
+space_group: 2.6464961508046025
+lattice: 0.14351290205250616
+total: 8.391712502634354
+Epoch 90/200: Train Loss: 1.5996977471547027
+---------------------------------
+Validation Loss:
+element: 1.9544433925462805
+wyckoff_letter: 3.583279308663183
+wyckoff_multiplier: 2.3767285554305366
+frac_coords: 0.350559898044752
+space_group: 2.7332395470660664
+lattice: 0.6764633759208347
+total: 11.674714579937966
+Epoch 91/200: Train Loss: 4.383387704763991
+---------------------------------
+Validation Loss:
+element: 1.7529427901558254
+wyckoff_letter: 2.630564695046345
+wyckoff_multiplier: 1.7934217038361921
+frac_coords: 0.33728694915771484
+space_group: 4.142192674719769
+lattice: 0.4952905903691831
+total: 11.151699168814448
+Epoch 92/200: Train Loss: 1.9032411798937163
+---------------------------------
+Validation Loss:
+element: 1.5046693553095278
+wyckoff_letter: 2.204630118059302
+wyckoff_multiplier: 1.5125409001889436
+frac_coords: 0.29410271022630774
+space_group: 2.784512063731318
+lattice: 0.2744584498198136
+total: 8.574913447668132
+Epoch 93/200: Train Loss: 0.8267322357135926
+---------------------------------
+Validation Loss:
+element: 1.483741096828295
+wyckoff_letter: 2.221165313818658
+wyckoff_multiplier: 1.4081074258555537
+frac_coords: 0.2935325581094493
+space_group: 3.290818919306216
+lattice: 0.24644090818322223
+total: 8.943806041465308
+Epoch 94/200: Train Loss: 0.8906872482044976
+---------------------------------
+Validation Loss:
+element: 1.370356850002123
+wyckoff_letter: 2.245964349156739
+wyckoff_multiplier: 1.336702180945355
+frac_coords: 0.27098039958788
+space_group: 2.667111769966457
+lattice: 0.23955200029456097
+total: 8.130667609097163
+Epoch 95/200: Train Loss: 0.6311375559401362
+---------------------------------
+Validation Loss:
+element: 1.3566484036652937
+wyckoff_letter: 2.3062817568131386
+wyckoff_multiplier: 1.3466048862623132
+frac_coords: 0.2548165114029594
+space_group: 2.5617803490680195
+lattice: 0.1533253296561863
+total: 7.979457459750107
+Epoch 96/200: Train Loss: 0.5611295339598911
+---------------------------------
+Validation Loss:
+element: 1.3648643493652344
+wyckoff_letter: 2.2571495837200803
+wyckoff_multiplier: 1.3191412220830503
+frac_coords: 0.2542427311772886
+space_group: 2.542643505594005
+lattice: 0.14119054960167926
+total: 7.8792318064793205
+Epoch 97/200: Train Loss: 0.5572979656077744
+---------------------------------
+Validation Loss:
+element: 1.3543826393459155
+wyckoff_letter: 2.2600776623520527
+wyckoff_multiplier: 1.3256516663924507
+frac_coords: 0.2418786961099376
+space_group: 2.5983855206033457
+lattice: 0.11863194341244905
+total: 7.899008055309792
+Epoch 98/200: Train Loss: 0.5212442963343287
+---------------------------------
+Validation Loss:
+element: 1.3514480590820312
+wyckoff_letter: 2.2505666793136254
+wyckoff_multiplier: 1.323376531186311
+frac_coords: 0.23675404424252716
+space_group: 2.4657249450683594
+lattice: 0.09088810630466627
+total: 7.7187583079237125
+Epoch 99/200: Train Loss: 0.4946874569115993
+---------------------------------
+Validation Loss:
+element: 1.3689023722773013
+wyckoff_letter: 2.2744367423294642
+wyckoff_multiplier: 1.2996156112007473
+frac_coords: 0.23466159986413043
+space_group: 2.428630828857422
+lattice: 0.08815604707469112
+total: 7.6944031647633695
+Epoch 100/200: Train Loss: 0.49198113768053725
+---------------------------------
+Validation Loss:
+element: 1.334214915399966
+wyckoff_letter: 2.2482875506361433
+wyckoff_multiplier: 1.355294766633407
+frac_coords: 0.2311265986898671
+space_group: 2.4745514911154043
+lattice: 0.08861924254375955
+total: 7.732094935940538
+Epoch 101/200: Train Loss: 0.5267162481544997
+---------------------------------
+Validation Loss:
+element: 1.3514736009680706
+wyckoff_letter: 2.31127242749841
+wyckoff_multiplier: 1.3498581596042798
+frac_coords: 0.22971903759500253
+space_group: 2.4479915784752886
+lattice: 0.07695161259692648
+total: 7.767266853320744
+Epoch 102/200: Train Loss: 0.4661006844800441
+---------------------------------
+Validation Loss:
+element: 1.3580842225447944
+wyckoff_letter: 2.343321289833844
+wyckoff_multiplier: 1.3483088120170261
+frac_coords: 0.22601067501565683
+space_group: 2.3468533391537876
+lattice: 0.19210879699043606
+total: 7.814687456064642
+Epoch 103/200: Train Loss: 0.5636845209016655
+---------------------------------
+Validation Loss:
+element: 1.5482648766559104
+wyckoff_letter: 2.5773654114158036
+wyckoff_multiplier: 1.5328049037767493
+frac_coords: 0.29821640512217645
+space_group: 2.6672290304432744
+lattice: 0.1739646455515986
+total: 8.797845169333097
+Epoch 104/200: Train Loss: 2.0819787542233223
+---------------------------------
+Validation Loss:
+element: 1.852635093357252
+wyckoff_letter: 2.796163243143935
+wyckoff_multiplier: 1.9370122163192085
+frac_coords: 0.3228329782900603
+space_group: 3.3037653384001358
+lattice: 0.37049451081649115
+total: 10.582903767764865
+Epoch 105/200: Train Loss: 3.7937156038972266
+---------------------------------
+Validation Loss:
+element: 1.844222524891729
+wyckoff_letter: 2.504625850069195
+wyckoff_multiplier: 1.7246279509171196
+frac_coords: 0.3412612832110861
+space_group: 3.905799202297045
+lattice: 0.8237288931141729
+total: 11.144266250161737
+Epoch 106/200: Train Loss: 2.019061279181123
+---------------------------------
+Validation Loss:
+element: 1.4851155488387398
+wyckoff_letter: 2.2995730471763607
+wyckoff_multiplier: 1.5149008709451426
+frac_coords: 0.2857192495594854
+space_group: 3.0518792193868887
+lattice: 0.1864273444465969
+total: 8.823614869019918
+Epoch 107/200: Train Loss: 0.8967202528554052
+---------------------------------
+Validation Loss:
+element: 1.4104256007982336
+wyckoff_letter: 2.293534595945677
+wyckoff_multiplier: 1.443671185037364
+frac_coords: 0.27084286316581396
+space_group: 3.1901440827742866
+lattice: 0.11970827890479047
+total: 8.728326371934775
+Epoch 108/200: Train Loss: 0.6127287350079619
+---------------------------------
+Validation Loss:
+element: 1.3702001986296282
+wyckoff_letter: 2.2948830848813517
+wyckoff_multiplier: 1.3600366011909817
+frac_coords: 0.25892033784285834
+space_group: 3.0951829993206523
+lattice: 0.10431668032770572
+total: 8.483539865712157
+Epoch 109/200: Train Loss: 0.540654192882053
+---------------------------------
+Validation Loss:
+element: 1.3759764795717986
+wyckoff_letter: 2.317915444648623
+wyckoff_multiplier: 1.4043277242909307
+frac_coords: 0.25238930660745373
+space_group: 3.01202856976053
+lattice: 0.07396581380263618
+total: 8.436603528810968
+Epoch 110/200: Train Loss: 0.505091652584526
+---------------------------------
+Validation Loss:
+element: 1.3522209499193274
+wyckoff_letter: 2.2559890593211924
+wyckoff_multiplier: 1.35308315442956
+frac_coords: 0.24596471371858017
+space_group: 3.0647579690684443
+lattice: 0.07849509301392929
+total: 8.350511471713027
+Epoch 111/200: Train Loss: 0.4770668797176988
+---------------------------------
+Validation Loss:
+element: 1.3316945615022078
+wyckoff_letter: 2.2708789249739447
+wyckoff_multiplier: 1.3975382265837297
+frac_coords: 0.242491805035135
+space_group: 2.9874702121900474
+lattice: 0.08596633309903352
+total: 8.316039570193118
+Epoch 112/200: Train Loss: 0.47397745126821655
+---------------------------------
+Validation Loss:
+element: 1.3978639685589334
+wyckoff_letter: 2.4011453573594665
+wyckoff_multiplier: 1.4850361036217732
+frac_coords: 0.24353458570397418
+space_group: 2.902776966924253
+lattice: 0.09824028222457222
+total: 8.528597252160505
+Epoch 113/200: Train Loss: 0.4599737962014418
+---------------------------------
+Validation Loss:
+element: 1.3331443123195483
+wyckoff_letter: 2.2889471814568454
+wyckoff_multiplier: 1.3992654551630435
+frac_coords: 0.2337108902309252
+space_group: 2.946842027747113
+lattice: 0.10978562935538914
+total: 8.311695637589674
+Epoch 114/200: Train Loss: 0.482925006484547
+---------------------------------
+Validation Loss:
+element: 1.3552261850108271
+wyckoff_letter: 2.324825282721696
+wyckoff_multiplier: 1.4037918422533118
+frac_coords: 0.22969795309978983
+space_group: 2.6955309328825576
+lattice: 0.07217877325804337
+total: 8.08125092711425
+Epoch 115/200: Train Loss: 0.445946065587321
+---------------------------------
+Validation Loss:
+element: 1.334515032560929
+wyckoff_letter: 2.311137096733891
+wyckoff_multiplier: 1.3825187683105469
+frac_coords: 0.2271624648052713
+space_group: 2.7462571185568105
+lattice: 0.09297641463901686
+total: 8.09456667008721
+Epoch 116/200: Train Loss: 0.4786476808255068
+---------------------------------
+Validation Loss:
+element: 1.3349388785984204
+wyckoff_letter: 2.3299410867804555
+wyckoff_multiplier: 1.4117242564325747
+frac_coords: 0.22611122545988663
+space_group: 2.698909096095873
+lattice: 0.09300183213275412
+total: 8.094626335000084
+Epoch 117/200: Train Loss: 0.4519493555847744
+---------------------------------
+Validation Loss:
+element: 1.3249418009882388
+wyckoff_letter: 2.3726418671028555
+wyckoff_multiplier: 1.4125550311544668
+frac_coords: 0.22391773306805154
+space_group: 2.745941162109375
+lattice: 0.05681546874668287
+total: 8.136813508265938
+Epoch 118/200: Train Loss: 0.5366161266971745
+---------------------------------
+Validation Loss:
+element: 1.29766323255456
+wyckoff_letter: 2.3330410080270316
+wyckoff_multiplier: 1.3915221172830332
+frac_coords: 0.22292128853175952
+space_group: 2.6656699802564536
+lattice: 0.09339731672535771
+total: 8.00421464620025
+Epoch 119/200: Train Loss: 0.5517364663862564
+---------------------------------
+Validation Loss:
+element: 1.3779441170070483
+wyckoff_letter: 2.3878938383875528
+wyckoff_multiplier: 1.4762344360351562
+frac_coords: 0.22707066328629202
+space_group: 2.6208580680515454
+lattice: 0.07252731530562691
+total: 8.16252843681796
+Epoch 120/200: Train Loss: 0.7445934919919587
+---------------------------------
+Validation Loss:
+element: 1.6354084844174592
+wyckoff_letter: 2.8673185980222122
+wyckoff_multiplier: 1.7094230651855469
+frac_coords: 0.2766379688097083
+space_group: 3.130565477454144
+lattice: 0.3075455789980681
+total: 9.926899452364895
+Epoch 121/200: Train Loss: 2.467180468106265
+---------------------------------
+Validation Loss:
+element: 1.8564879375955332
+wyckoff_letter: 3.1012333295763894
+wyckoff_multiplier: 1.8950772492781929
+frac_coords: 0.3163553528163744
+space_group: 3.988344938858696
+lattice: 0.5798844461855681
+total: 11.737383425431153
+Epoch 122/200: Train Loss: 2.4706803124636885
+---------------------------------
+Validation Loss:
+element: 1.6500499559485393
+wyckoff_letter: 2.5859469202814562
+wyckoff_multiplier: 1.6331851793372112
+frac_coords: 0.28710761277571967
+space_group: 2.939846536387568
+lattice: 0.4222327937250552
+total: 9.518369004954561
+Epoch 123/200: Train Loss: 1.0014790197141599
+---------------------------------
+Validation Loss:
+element: 1.4740278824515964
+wyckoff_letter: 2.577250844964989
+wyckoff_multiplier: 1.5596920510996943
+frac_coords: 0.2614317562269128
+space_group: 2.547322646431301
+lattice: 0.14388630701147992
+total: 8.563611281857531
+Epoch 124/200: Train Loss: 0.8525965898714458
+---------------------------------
+Validation Loss:
+element: 1.4481433370838994
+wyckoff_letter: 2.661466100245656
+wyckoff_multiplier: 1.5668094469153362
+frac_coords: 0.26238897572393005
+space_group: 2.7272640725840693
+lattice: 0.10145875682001529
+total: 8.767530714974155
+Epoch 125/200: Train Loss: 0.5806185935329522
+---------------------------------
+Validation Loss:
+element: 1.417474829632303
+wyckoff_letter: 2.5838291976080283
+wyckoff_multiplier: 1.527213884436566
+frac_coords: 0.2421453517416249
+space_group: 2.504726575768512
+lattice: 0.11941788507544476
+total: 8.394807945294684
+Epoch 126/200: Train Loss: 0.5116426000549411
+---------------------------------
+Validation Loss:
+element: 1.396356665569803
+wyckoff_letter: 2.5374632029593727
+wyckoff_multiplier: 1.504738019860309
+frac_coords: 0.24040873154349948
+space_group: 2.2983464780061142
+lattice: 0.12430481288744055
+total: 8.101617951301108
+Epoch 127/200: Train Loss: 0.4583360134988116
+---------------------------------
+Validation Loss:
+element: 1.373388787974482
+wyckoff_letter: 2.5411645944925385
+wyckoff_multiplier: 1.4896633314049763
+frac_coords: 0.23229418630185333
+space_group: 2.3051560443380605
+lattice: 0.08765761748604152
+total: 8.029324663464028
+Epoch 128/200: Train Loss: 0.41160621731911406
+---------------------------------
+Validation Loss:
+element: 1.3443401170813518
+wyckoff_letter: 2.554881624428318
+wyckoff_multiplier: 1.4522235704504924
+frac_coords: 0.22636797117150348
+space_group: 2.2705671890922217
+lattice: 0.06973488434501317
+total: 7.918115446193513
+Epoch 129/200: Train Loss: 0.39649209703888205
+---------------------------------
+Validation Loss:
+element: 1.3533279584801716
+wyckoff_letter: 2.5359773117949684
+wyckoff_multiplier: 1.5142792411472485
+frac_coords: 0.22394632256549338
+space_group: 2.289391227390455
+lattice: 0.06758541127909785
+total: 7.98450766673443
+Epoch 130/200: Train Loss: 0.3946656422041319
+---------------------------------
+Validation Loss:
+element: 1.3540617072063943
+wyckoff_letter: 2.564761241296293
+wyckoff_multiplier: 1.5026051065196162
+frac_coords: 0.22134492708289105
+space_group: 2.299967392631199
+lattice: 0.14684244860773502
+total: 8.08958302140202
+Epoch 131/200: Train Loss: 0.6487881617368696
+---------------------------------
+Validation Loss:
+element: 1.3769361247187075
+wyckoff_letter: 2.544951429801049
+wyckoff_multiplier: 1.51385730245839
+frac_coords: 0.22497975307962167
+space_group: 2.1758346557617188
+lattice: 0.0781296387962673
+total: 7.914688984679126
+Epoch 132/200: Train Loss: 1.5968976928453888
+---------------------------------
+Validation Loss:
+element: 1.884349657141644
+wyckoff_letter: 3.3903942353984466
+wyckoff_multiplier: 2.0890282340671704
+frac_coords: 0.3130363174106764
+space_group: 4.387513533882473
+lattice: 0.7675550709600034
+total: 12.831876844465475
+Epoch 133/200: Train Loss: 2.236103205813723
+---------------------------------
+Validation Loss:
+element: 1.575149038563604
+wyckoff_letter: 2.7884185829739057
+wyckoff_multiplier: 1.5241865075152854
+frac_coords: 0.2843912580738897
+space_group: 3.0604049019191577
+lattice: 0.30638311220251996
+total: 9.538933456745571
+Epoch 134/200: Train Loss: 0.9308311911836727
+---------------------------------
+Validation Loss:
+element: 1.4494332023288892
+wyckoff_letter: 2.6417023392642704
+wyckoff_multiplier: 1.4864236582880435
+frac_coords: 0.2563760176948879
+space_group: 2.9753082938816235
+lattice: 1.771563654360564
+total: 10.580807117485673
+Epoch 135/200: Train Loss: 0.723032656581894
+---------------------------------
+Validation Loss:
+element: 1.383452954499618
+wyckoff_letter: 2.58737053504607
+wyckoff_multiplier: 1.4708042974057405
+frac_coords: 0.25075516493424127
+space_group: 2.7869833241338315
+lattice: 0.18665946048239004
+total: 8.666025283378026
+Epoch 136/200: Train Loss: 0.48368002454326425
+---------------------------------
+Validation Loss:
+element: 1.3717345362124236
+wyckoff_letter: 2.660400034475213
+wyckoff_multiplier: 1.4657189742378567
+frac_coords: 0.24019521215687628
+space_group: 2.5936431884765625
+lattice: 0.4429713124814241
+total: 8.774663352508858
+Epoch 137/200: Train Loss: 0.6136138450655809
+---------------------------------
+Validation Loss:
+element: 1.4125311478324558
+wyckoff_letter: 2.635793536255648
+wyckoff_multiplier: 1.5750394074813179
+frac_coords: 0.2391312433325726
+space_group: 2.5980106851328975
+lattice: 0.3189247587452764
+total: 8.779430599895372
+Epoch 138/200: Train Loss: 0.4833131691594407
+---------------------------------
+Validation Loss:
+element: 1.3301248965056047
+wyckoff_letter: 2.604246044902872
+wyckoff_multiplier: 1.4473507093346638
+frac_coords: 0.2331772057906441
+space_group: 2.4338894719662876
+lattice: 0.06848417676013449
+total: 8.117272609127982
+Epoch 139/200: Train Loss: 0.5712361780710695
+---------------------------------
+Validation Loss:
+element: 1.403912419858186
+wyckoff_letter: 2.7172631402815197
+wyckoff_multiplier: 1.6190820776897927
+frac_coords: 0.24029787727024243
+space_group: 2.2238484258237095
+lattice: 0.15852429555810016
+total: 8.362928388203615
+Epoch 140/200: Train Loss: 0.5628660801141081
+---------------------------------
+Validation Loss:
+element: 1.3521095773448115
+wyckoff_letter: 2.574096985243899
+wyckoff_multiplier: 1.5106360394021738
+frac_coords: 0.22944651479306427
+space_group: 2.295823802118716
+lattice: 0.22369420010110605
+total: 8.185807342283297
+Epoch 141/200: Train Loss: 0.4807490815372836
+---------------------------------
+Validation Loss:
+element: 1.353594158006751
+wyckoff_letter: 2.6112422054335043
+wyckoff_multiplier: 1.5324134826660156
+frac_coords: 0.2313250666079314
+space_group: 2.307153784710428
+lattice: 0.22963474107825238
+total: 8.265363405744623
+Epoch 142/200: Train Loss: 0.4535911977995514
+---------------------------------
+Validation Loss:
+element: 1.3647866456404976
+wyckoff_letter: 2.6250705165756814
+wyckoff_multiplier: 1.5376238615616509
+frac_coords: 0.22637812987617825
+space_group: 2.289299840512483
+lattice: 0.08020717164744502
+total: 8.123366154099012
+Epoch 143/200: Train Loss: 0.47400351456341877
+---------------------------------
+Validation Loss:
+element: 1.3809696695078975
+wyckoff_letter: 2.6759517298151034
+wyckoff_multiplier: 1.6456370146378227
+frac_coords: 0.22882231422092603
+space_group: 2.293440445609715
+lattice: 0.0784800674604333
+total: 8.303301470759644
+Epoch 144/200: Train Loss: 0.4526538210408303
+---------------------------------
+Validation Loss:
+element: 1.3490095553190813
+wyckoff_letter: 2.722341844176751
+wyckoff_multiplier: 1.6027977984884512
+frac_coords: 0.22392430512801462
+space_group: 2.272475864576257
+lattice: 0.07530124809430994
+total: 8.245850420551836
+Epoch 145/200: Train Loss: 0.5979408616110107
+---------------------------------
+Validation Loss:
+element: 1.4590890303902004
+wyckoff_letter: 2.736902835470349
+wyckoff_multiplier: 1.714337556258492
+frac_coords: 0.25651135651961615
+space_group: 2.373058982517408
+lattice: 0.11363419242527174
+total: 8.653534279644203
+Epoch 146/200: Train Loss: 1.0413805533284002
+---------------------------------
+Validation Loss:
+element: 1.5802132979683254
+wyckoff_letter: 2.961843649257266
+wyckoff_multiplier: 1.766236678413723
+frac_coords: 0.268247998279074
+space_group: 2.8686440509298574
+lattice: 0.2138842085133428
+total: 9.65906988752217
+Epoch 147/200: Train Loss: 1.2878716824322403
+---------------------------------
+Validation Loss:
+element: 1.7079000058381453
+wyckoff_letter: 2.9907599196084647
+wyckoff_multiplier: 1.9707351352857507
+frac_coords: 0.282129370647928
+space_group: 2.6637954711914062
+lattice: 0.22390166572902515
+total: 9.839221794131259
+Epoch 148/200: Train Loss: 1.5038743904560714
+---------------------------------
+Validation Loss:
+element: 1.5441909458326257
+wyckoff_letter: 2.9952853181674532
+wyckoff_multiplier: 1.856409155804178
+frac_coords: 0.2731375901595406
+space_group: 3.0072071241295855
+lattice: 0.2887234065843665
+total: 9.964953536395692
+Epoch 149/200: Train Loss: 1.1347164401329288
+---------------------------------
+Validation Loss:
+element: 1.5422195766283118
+wyckoff_letter: 2.780115193555433
+wyckoff_multiplier: 1.6916782545006794
+frac_coords: 0.26186818661897077
+space_group: 2.9744710507600205
+lattice: 0.2364005420518958
+total: 9.486752745548282
+Epoch 150/200: Train Loss: 0.83138350251757
+---------------------------------
+Validation Loss:
+element: 1.4208274509595789
+wyckoff_letter: 2.7397484585283407
+wyckoff_multiplier: 1.6843653139860735
+frac_coords: 0.24407737151436185
+space_group: 2.9688080497409985
+lattice: 0.11660763491754947
+total: 9.1744337973939
+Epoch 151/200: Train Loss: 0.47226944375158897
+---------------------------------
+Validation Loss:
+element: 1.3920938243036685
+wyckoff_letter: 2.6899277801721255
+wyckoff_multiplier: 1.6416204701299253
+frac_coords: 0.23001876084700876
+space_group: 2.8145496534264605
+lattice: 0.07621442753335704
+total: 8.844425017982383
+Epoch 152/200: Train Loss: 0.4256923897720965
+---------------------------------
+Validation Loss:
+element: 1.3636929885200832
+wyckoff_letter: 2.604173930998141
+wyckoff_multiplier: 1.5747275974439539
+frac_coords: 0.2202842961186948
+space_group: 2.6912443741508154
+lattice: 0.10944680545641028
+total: 8.563570107342006
+Epoch 153/200: Train Loss: 0.3972839131947055
+---------------------------------
+Validation Loss:
+element: 1.36059512262759
+wyckoff_letter: 2.630615174290792
+wyckoff_multiplier: 1.5912067579186482
+frac_coords: 0.2178596206333326
+space_group: 2.624318496040676
+lattice: 0.08162569999694824
+total: 8.506220853792613
+Epoch 154/200: Train Loss: 0.35232291727046705
+---------------------------------
+Validation Loss:
+element: 1.3324874380360479
+wyckoff_letter: 2.5763400246795904
+wyckoff_multiplier: 1.5423927307128906
+frac_coords: 0.21617107805998428
+space_group: 2.6815382915994395
+lattice: 0.051153193349423615
+total: 8.400082548200732
+Epoch 155/200: Train Loss: 0.34434458906378734
+---------------------------------
+Validation Loss:
+element: 1.3391184599503227
+wyckoff_letter: 2.5813011537310944
+wyckoff_multiplier: 1.571387581203295
+frac_coords: 0.2123409768809443
+space_group: 2.7327404851498813
+lattice: 0.047099211941594665
+total: 8.483987809366372
+Epoch 156/200: Train Loss: 0.3422112584713211
+---------------------------------
+Validation Loss:
+element: 1.3351290329642918
+wyckoff_letter: 2.594203467332766
+wyckoff_multiplier: 1.5560884890349016
+frac_coords: 0.21391122237495755
+space_group: 2.665498650592306
+lattice: 0.04917159806127134
+total: 8.41400276049691
+Epoch 157/200: Train Loss: 0.363273968466588
+---------------------------------
+Validation Loss:
+element: 1.313464289126189
+wyckoff_letter: 2.581144461040418
+wyckoff_multiplier: 1.5630703801694124
+frac_coords: 0.21454786217730978
+space_group: 2.6351119331691577
+lattice: 0.06761073029559592
+total: 8.374949827141506
+Epoch 158/200: Train Loss: 0.3546495268366426
+---------------------------------
+Validation Loss:
+element: 1.3204522340194038
+wyckoff_letter: 2.5520502621324708
+wyckoff_multiplier: 1.5566097757090693
+frac_coords: 0.21058855886044708
+space_group: 2.54950531669285
+lattice: 0.06237805407980214
+total: 8.251584186686522
+Epoch 159/200: Train Loss: 0.3510077006866768
+---------------------------------
+Validation Loss:
+element: 1.2998277415399966
+wyckoff_letter: 2.5884588398046016
+wyckoff_multiplier: 1.5775544539741848
+frac_coords: 0.2094190846318784
+space_group: 2.6153692162555195
+lattice: 0.10805305190708327
+total: 8.398682001082934
+Epoch 160/200: Train Loss: 0.3635769726865616
+---------------------------------
+Validation Loss:
+element: 1.3105841097624407
+wyckoff_letter: 2.553677329599012
+wyckoff_multiplier: 1.5175142702849016
+frac_coords: 0.2088161344113557
+space_group: 2.5123196477475376
+lattice: 0.14669099061385446
+total: 8.249602436222466
+Epoch 161/200: Train Loss: 0.37400303305931343
+---------------------------------
+Validation Loss:
+element: 1.316666146983271
+wyckoff_letter: 2.6117108518929957
+wyckoff_multiplier: 1.6009977589482847
+frac_coords: 0.20841876320216968
+space_group: 2.5192142984141475
+lattice: 0.11041931484056555
+total: 8.367427127539468
+Epoch 162/200: Train Loss: 0.41362009016682477
+---------------------------------
+Validation Loss:
+element: 1.3228559908659563
+wyckoff_letter: 2.5724986645278944
+wyckoff_multiplier: 1.5743928992229959
+frac_coords: 0.21121070695960004
+space_group: 2.3456583437712295
+lattice: 0.23276679412178372
+total: 8.259383311034307
+Epoch 163/200: Train Loss: 1.1570778490347948
+---------------------------------
+Validation Loss:
+element: 1.6554059567658796
+wyckoff_letter: 3.1393596582378733
+wyckoff_multiplier: 1.8940083047618037
+frac_coords: 0.30161051128221594
+space_group: 2.745559360670007
+lattice: 0.47389801688816235
+total: 10.209841400099517
+Epoch 164/200: Train Loss: 2.104074290262121
+---------------------------------
+Validation Loss:
+element: 1.5155813797660496
+wyckoff_letter: 2.83020775054019
+wyckoff_multiplier: 1.7792681818423064
+frac_coords: 0.2795984434044879
+space_group: 3.6379842343537705
+lattice: 0.4662603295367697
+total: 10.508900426910103
+Epoch 165/200: Train Loss: 1.2652553990924913
+---------------------------------
+Validation Loss:
+element: 1.4108427296514097
+wyckoff_letter: 2.6837949300848645
+wyckoff_multiplier: 1.6326647219450579
+frac_coords: 0.25518997855808423
+space_group: 2.896806468134341
+lattice: 0.13474628199701724
+total: 9.014044993213304
+Epoch 166/200: Train Loss: 0.7720365640564059
+---------------------------------
+Validation Loss:
+element: 1.3724145474641218
+wyckoff_letter: 2.6982771657733635
+wyckoff_multiplier: 1.5599023570185122
+frac_coords: 0.24543420128200366
+space_group: 3.5810132233992866
+lattice: 0.13640689849853516
+total: 9.59344865243334
+Epoch 167/200: Train Loss: 0.49783798208749386
+---------------------------------
+Validation Loss:
+element: 1.358679895815642
+wyckoff_letter: 2.647203161505012
+wyckoff_multiplier: 1.550274890402089
+frac_coords: 0.23079888716987942
+space_group: 2.9190206113068955
+lattice: 0.15565450295158054
+total: 8.86163230807472
+Epoch 168/200: Train Loss: 0.4095081891006208
+---------------------------------
+Validation Loss:
+element: 1.3408379762069038
+wyckoff_letter: 2.6233337415170657
+wyckoff_multiplier: 1.5141200190005095
+frac_coords: 0.22396558264027472
+space_group: 2.74414759096892
+lattice: 0.08163814441017482
+total: 8.52804292090166
+Epoch 169/200: Train Loss: 0.3743075950349617
+---------------------------------
+Validation Loss:
+element: 1.3144959988801375
+wyckoff_letter: 2.6532263923314003
+wyckoff_multiplier: 1.5172507244607676
+frac_coords: 0.21730862493100372
+space_group: 2.7010144772736924
+lattice: 0.07032247729923415
+total: 8.473618403388825
+Epoch 170/200: Train Loss: 0.38156494924984885
+---------------------------------
+Validation Loss:
+element: 1.3193778162417205
+wyckoff_letter: 2.6644257539199554
+wyckoff_multiplier: 1.5307598943295686
+frac_coords: 0.21833181381225586
+space_group: 2.7330954178519873
+lattice: 0.0734151083490123
+total: 8.539405912677111
+Epoch 171/200: Train Loss: 0.32933491957331956
+---------------------------------
+Validation Loss:
+element: 1.3187377763831096
+wyckoff_letter: 2.6269918308008693
+wyckoff_multiplier: 1.4767175757366677
+frac_coords: 0.21167133165442426
+space_group: 2.6779727106509
+lattice: 0.05274191110030464
+total: 8.364833590616824
+Epoch 172/200: Train Loss: 0.31835720568415604
+---------------------------------
+Validation Loss:
+element: 1.310989877452021
+wyckoff_letter: 2.6266246052325477
+wyckoff_multiplier: 1.5271284683890964
+frac_coords: 0.21507020618604578
+space_group: 2.695209669030231
+lattice: 0.051129444785740066
+total: 8.426151907880124
+Epoch 173/200: Train Loss: 0.3120299475272192
+---------------------------------
+Validation Loss:
+element: 1.280419805775518
+wyckoff_letter: 2.567282603739197
+wyckoff_multiplier: 1.483952232029127
+frac_coords: 0.2100638721300208
+space_group: 2.660270359205163
+lattice: 0.06060396588366965
+total: 8.26259309054879
+Epoch 174/200: Train Loss: 0.33453106309812813
+---------------------------------
+Validation Loss:
+element: 1.317408271457838
+wyckoff_letter: 2.651381909933512
+wyckoff_multiplier: 1.5304366402004077
+frac_coords: 0.2093820571899414
+space_group: 2.5670069818911343
+lattice: 0.05847054979075556
+total: 8.334086429661992
+Epoch 175/200: Train Loss: 0.3377546534905063
+---------------------------------
+Validation Loss:
+element: 1.31299060323964
+wyckoff_letter: 2.6040842955286108
+wyckoff_multiplier: 1.5352136363153872
+frac_coords: 0.20791341947472614
+space_group: 2.498054670250934
+lattice: 0.1721850478130838
+total: 8.330441989836418
+Epoch 176/200: Train Loss: 0.346561546499663
+---------------------------------
+Validation Loss:
+element: 1.318948911583942
+wyckoff_letter: 2.6054167134931467
+wyckoff_multiplier: 1.5147131214971128
+frac_coords: 0.20774843381798785
+space_group: 2.5313604603643003
+lattice: 0.065232805583788
+total: 8.243420676837554
+Epoch 177/200: Train Loss: 0.3296835445274355
+---------------------------------
+Validation Loss:
+element: 1.3134501913319463
+wyckoff_letter: 2.6108236845293753
+wyckoff_multiplier: 1.5137868134871773
+frac_coords: 0.2104564956996752
+space_group: 2.4639277250870415
+lattice: 0.06756905887437903
+total: 8.180013799432963
+Epoch 178/200: Train Loss: 0.33531702385160284
+---------------------------------
+Validation Loss:
+element: 1.301612605219302
+wyckoff_letter: 2.678624489008804
+wyckoff_multiplier: 1.5751437311587126
+frac_coords: 0.20911753695944083
+space_group: 2.590156886888587
+lattice: 0.47763393236243207
+total: 8.832289448031457
+Epoch 179/200: Train Loss: 0.4212691742584755
+---------------------------------
+Validation Loss:
+element: 1.3123849785846213
+wyckoff_letter: 2.736527690468245
+wyckoff_multiplier: 1.6309947138247283
+frac_coords: 0.21698626228000806
+space_group: 2.3026627250339673
+lattice: 0.22808487518973972
+total: 8.427641106310555
+Epoch 180/200: Train Loss: 0.6342594771586353
+---------------------------------
+Validation Loss:
+element: 1.5167448624320652
+wyckoff_letter: 3.1562041045108975
+wyckoff_multiplier: 1.8936669722847317
+frac_coords: 0.26259613037109375
+space_group: 3.0080742214037026
+lattice: 0.12096181123153023
+total: 9.958248701116194
+Epoch 181/200: Train Loss: 2.224074837560759
+---------------------------------
+Validation Loss:
+element: 1.7102860160495923
+wyckoff_letter: 2.944541184841128
+wyckoff_multiplier: 2.0201027911642324
+frac_coords: 0.29442926075147546
+space_group: 3.5673957492994224
+lattice: 0.37446179597274115
+total: 10.911216329785304
+Epoch 182/200: Train Loss: 1.886591008891729
+---------------------------------
+Validation Loss:
+element: 1.5334344946819802
+wyckoff_letter: 2.759279176428347
+wyckoff_multiplier: 1.797100896420686
+frac_coords: 0.26580460175223974
+space_group: 3.0080606211786685
+lattice: 0.26412267270295514
+total: 9.627802590740885
+Epoch 183/200: Train Loss: 0.7752727903333596
+---------------------------------
+Validation Loss:
+element: 1.3811347795569378
+wyckoff_letter: 2.7857514960511636
+wyckoff_multiplier: 1.781670611837636
+frac_coords: 0.24574416616688605
+space_group: 3.017206274944803
+lattice: 0.12373068021691364
+total: 9.335238262744488
+Epoch 184/200: Train Loss: 0.5028469171133084
+---------------------------------
+Validation Loss:
+element: 1.3283787602963655
+wyckoff_letter: 2.739483827218662
+wyckoff_multiplier: 1.7451926521632983
+frac_coords: 0.23178399127462637
+space_group: 3.0492427660071333
+lattice: 0.10633122402688731
+total: 9.200413064119859
+Epoch 185/200: Train Loss: 0.4042423600760722
+---------------------------------
+Validation Loss:
+element: 1.3272928154986838
+wyckoff_letter: 2.776493996426624
+wyckoff_multiplier: 1.7736763332201086
+frac_coords: 0.21859936092210852
+space_group: 2.8873771999193276
+lattice: 0.06805101684902025
+total: 9.051490501375968
+Epoch 186/200: Train Loss: 0.34749044392210904
+---------------------------------
+Validation Loss:
+element: 1.3273944854736328
+wyckoff_letter: 2.7555586888720787
+wyckoff_multiplier: 1.8020818959111753
+frac_coords: 0.21688453010890796
+space_group: 2.9385701055112095
+lattice: 0.36035450645115064
+total: 9.400844227677261
+Epoch 187/200: Train Loss: 0.4541376073716269
+---------------------------------
+Validation Loss:
+element: 1.334623502648395
+wyckoff_letter: 2.7523706235810024
+wyckoff_multiplier: 1.8121555162512737
+frac_coords: 0.21392575554225757
+space_group: 2.8032787157141645
+lattice: 0.15057743113973868
+total: 9.066931144149986
+Epoch 188/200: Train Loss: 0.439439949511898
+---------------------------------
+Validation Loss:
+element: 1.337503599083942
+wyckoff_letter: 2.768634120034872
+wyckoff_multiplier: 1.8113927426545515
+frac_coords: 0.20986476151839548
+space_group: 2.775229246720024
+lattice: 0.05274429010308307
+total: 8.955368601094069
+Epoch 189/200: Train Loss: 0.310046955931244
+---------------------------------
+Validation Loss:
+element: 1.3388711680536685
+wyckoff_letter: 2.7289019568987563
+wyckoff_multiplier: 1.7745591868524966
+frac_coords: 0.21034725852634595
+space_group: 2.771645919136379
+lattice: 0.04828259219294009
+total: 8.872608496438255
+Epoch 190/200: Train Loss: 0.3229668529383777
+---------------------------------
+Validation Loss:
+element: 1.3135728421418562
+wyckoff_letter: 2.6907413304028616
+wyckoff_multiplier: 1.746099389117697
+frac_coords: 0.2069867590199346
+space_group: 2.8828333979067593
+lattice: 0.04953541962996773
+total: 8.889769190416164
+Epoch 191/200: Train Loss: 0.2972515068535908
+---------------------------------
+Validation Loss:
+element: 1.3134972116221553
+wyckoff_letter: 2.7177752519640266
+wyckoff_multiplier: 1.7743747545325237
+frac_coords: 0.20884806176890497
+space_group: 2.974362580672554
+lattice: 0.08341918302618939
+total: 9.072276951640395
+Epoch 192/200: Train Loss: 0.300558957113958
+---------------------------------
+Validation Loss:
+element: 1.2935170712678328
+wyckoff_letter: 2.691904010038565
+wyckoff_multiplier: 1.7019621807595957
+frac_coords: 0.20518385845681894
+space_group: 2.8139147551163384
+lattice: 0.04238638670548149
+total: 8.748867867095633
+Epoch 193/200: Train Loss: 0.29313857690908013
+---------------------------------
+Validation Loss:
+element: 1.3011003577190896
+wyckoff_letter: 2.6803618051238387
+wyckoff_multiplier: 1.7307430764903193
+frac_coords: 0.2043183368185292
+space_group: 2.7487761456033457
+lattice: 0.05318307358285655
+total: 8.718483180301938
+Epoch 194/200: Train Loss: 0.2927619017872844
+---------------------------------
+Validation Loss:
+element: 1.3195838928222656
+wyckoff_letter: 2.695441928358627
+wyckoff_multiplier: 1.6960744443147078
+frac_coords: 0.20915419122447138
+space_group: 2.726990575375764
+lattice: 0.18982767022174338
+total: 8.837073287465275
+Epoch 195/200: Train Loss: 0.47912009194635335
+---------------------------------
+Validation Loss:
+element: 1.2881134696628735
+wyckoff_letter: 2.766133320402035
+wyckoff_multiplier: 1.7391254590905232
+frac_coords: 0.20584309619405997
+space_group: 2.5148171134617017
+lattice: 0.06468477456466011
+total: 8.578716639971528
+Epoch 196/200: Train Loss: 0.3237810493451711
+---------------------------------
+Validation Loss:
+element: 1.268053967019786
+wyckoff_letter: 2.719526529285895
+wyckoff_multiplier: 1.719625887663468
+frac_coords: 0.20523479710454526
+space_group: 2.601285353950832
+lattice: 0.060505369435185974
+total: 8.574232132107342
+Epoch 197/200: Train Loss: 0.3449591340583542
+---------------------------------
+Validation Loss:
+element: 1.3374593154243801
+wyckoff_letter: 2.7647201550519993
+wyckoff_multiplier: 1.6717028410538384
+frac_coords: 0.20979632502016815
+space_group: 2.7377594657566235
+lattice: 0.05516069350035294
+total: 8.776598528715184
+Epoch 198/200: Train Loss: 0.37705855815947553
+---------------------------------
+Validation Loss:
+element: 1.3307058085565981
+wyckoff_letter: 2.828753845412339
+wyckoff_multiplier: 1.7366984823475713
+frac_coords: 0.2144838623378588
+space_group: 2.7138768071713657
+lattice: 0.06309492691703465
+total: 8.88761381682753
+Epoch 199/200: Train Loss: 0.8012151594952317
+---------------------------------
+Validation Loss:
+element: 1.677222210427989
+wyckoff_letter: 3.3654805112051873
+wyckoff_multiplier: 2.1334245101265283
+frac_coords: 0.27897484406181006
+space_group: 3.1862673552139946
+lattice: 0.19315734116927438
+total: 10.834526666841326
+Epoch 200/200: Train Loss: 1.1931815905401328
+---------------------------------
+Validation Loss:
+element: 1.5008987758470618
+wyckoff_letter: 3.044842965464085
+wyckoff_multiplier: 1.9886642124341882
+frac_coords: 0.2551448241524074
+space_group: 2.946385922639266
+lattice: 0.20575813625169836
+total: 9.941694643260888
