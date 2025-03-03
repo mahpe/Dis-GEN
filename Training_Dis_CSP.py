@@ -15,25 +15,26 @@ import json
 ##### Load data ########################################################
 test_size = 0.2
 val_size = 0.1
-batch_size = 32
+batch_size = 64
 log_step = 1
-lr = 0.0001
-epochs = 200
+lr = 0.000005
+epochs = 2500
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-
-folder_name = 'normal'
+print('Device:',device)
+folder_name = 'ICSD_latent_dis_site_middle_KL_element_'
 folder_name = folder_name + f'lr_{lr}_epochs_{epochs}_batch_{batch_size}_test_{test_size}_val_{val_size}'
 
 if not os.path.exists(folder_name):
     os.makedirs(folder_name)
 
-#X = crystal_rep.total_atomistic_features
-#Y = crystal_rep.total_crystal_features
-#np.save('X_2D.npy',X)
-#np.save('Y_2D.npy',Y)
-X = np.load('X_2D.npy')
-Y = np.load('Y_2D.npy')
 
+#x_train = np.load('X_train_0.100000.npy')
+#y_train = np.load('Y_train_0.100000.npy')
+#x_val = np.load('X_val.npy')
+#y_val = np.load('Y_val.npy')
+
+X = np.load('atomic_features_icsd.npy')
+Y = np.load('crystal_features_icsd.npy')
 print('X:',X.shape)
 print('Y:',Y.shape)
 
@@ -45,8 +46,8 @@ Y_scaled[:,:6] = scaler_Y.fit_transform(Y[:,:6])
 Y = Y_scaled
 
 x_train_val,x_test,y_train_val,y_test=train_test_split( X \
-                                               ,Y,test_size=test_size)
-x_train,x_val,y_train,y_val = train_test_split(x_train_val,y_train_val,test_size=val_size)
+                                               ,Y,test_size=test_size,random_state=42)
+x_train,x_val,y_train,y_val = train_test_split(x_train_val,y_train_val,test_size=val_size,random_state=42)
 print('Train:',x_train.shape,y_train.shape)
 print('Val:',x_val.shape,y_val.shape)
 print('Test:',x_test.shape,y_test.shape)
@@ -92,7 +93,6 @@ val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False)
 #test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
 
 ######## VAE model #######################################################
-# Define the VAE model
 # Define the VAE model
 class VAE(nn.Module):
     def __init__(self, feature_dim, wyckoff_dim, crystal_dim,space_group_dim=230,lattice_dim=6,
@@ -147,6 +147,7 @@ class VAE(nn.Module):
         self.wycokff_letter = nn.Linear(feature_dim,27)
         self.wyckoff_multiplier = nn.Linear(feature_dim,51)
         self.frac_coords = nn.Linear(feature_dim,3)
+        self.disordered_site = nn.Linear(feature_dim,1)
 
     def encode(self, x, x2):
         # Atomic feature encoding
@@ -235,9 +236,11 @@ class VAE(nn.Module):
         if self.verbose: print('Frac Coords:',decoded_frac_coords.shape)
         decoded_wyckoff_letter =self.wycokff_letter(dec4)
         if self.verbose: print('Wyckoff Letter:',decoded_wyckoff_letter.shape)
+        decoded_disordered_site = self.disordered_site(dec4)
+        if self.verbose: print('Disordered Site:',decoded_disordered_site.shape)
         
         
-        return decoded_element,decoded_wyckoff_multiplier,decoded_frac_coords,decoded_wyckoff_letter, decoded_sg, decoded_lattice
+        return decoded_element,decoded_wyckoff_multiplier,decoded_frac_coords,decoded_wyckoff_letter, decoded_sg, decoded_lattice,decoded_disordered_site
 
     def forward(self, x, x2):
         # Encode
@@ -245,11 +248,12 @@ class VAE(nn.Module):
         # Latent space sampling
         z = self.sampling(z_mean, z_log_var)
         # Decode
-        decoded_element,decoded_wyckoff_multiplier,decoded_frac_coords,decoded_wyckoff_letter, decoded_sg, decoded_lattice = self.decode(z)
+        decoded_element,decoded_wyckoff_multiplier,decoded_frac_coords,decoded_wyckoff_letter, decoded_sg, decoded_lattice,decoded_disordered_site = self.decode(z)
         outputs = {'decoded_element':decoded_element,
                     'decoded_wyckoff_multiplier':decoded_wyckoff_multiplier,
                     'decoded_frac_coords':decoded_frac_coords,
                     'decoded_wyckoff_letter':decoded_wyckoff_letter,
+                    'decoded_disordered_site':decoded_disordered_site,
                    'decoded_sg':decoded_sg,
                    'decoded_lattice':decoded_lattice,
                    'z_mean':z_mean,
@@ -257,13 +261,14 @@ class VAE(nn.Module):
         return outputs
 
 # Initialize the VAE
-feature_dim = X.shape[2]
-wyckoff_dim = X.shape[1]
-crystal_dim = Y.shape[1]
-kernel = [4,3,2]
+feature_dim = x_train.shape[2]
+wyckoff_dim = x_train.shape[1]
+crystal_dim = y_train.shape[1]
+kernel = [5,3,2]
 stride = [2,3,2]
-max_filter = 32
-latent_dim = 256
+max_filter = 16
+#latent_dim = 256
+latent_dim = 512
 
 vae = VAE(feature_dim, wyckoff_dim, crystal_dim,verbose=True,kernel=kernel,
           stride=stride,max_filter=max_filter,latent_dim=latent_dim)
@@ -274,14 +279,9 @@ out = vae(x_batch, y_batch)
 # NOTE: Kernel add an extra dimension for the wyckoff sites 
 #from torchsummary import summary1
 #summary(vae, [(feature_dim,wyckoff_dim),(crystal_dim,)],)
-# 
 ############################################################################
 
 ##### Loss function ######################################################
-
-
-# Defien loss function and test it
-# Define the VAE loss function
 
 # Defien loss function and test it
 # Define the VAE loss function
@@ -320,19 +320,23 @@ def vae_loss_function(model_output, x, y, coeffs,verbose=False):
     decoded_wyckoff_multiplier = model_output['decoded_wyckoff_multiplier']
     decoded_frac_coords = model_output['decoded_frac_coords']
     decoded_wyckoff_letter = model_output['decoded_wyckoff_letter']
+    decoded_disordered_site = model_output['decoded_disordered_site']
 
     if verbose:
         print('Original:',x.shape)
-        print('Reconstructed:',decoded_element.shape,decoded_wyckoff_multiplier.shape,decoded_frac_coords.shape,decoded_wyckoff_letter.shape)
+        print('Reconstructed:',decoded_element.shape,decoded_wyckoff_multiplier.shape,decoded_frac_coords.shape,decoded_wyckoff_letter.shape,decoded_disordered_site.shape)
         print('Z mean:',z_mean.shape)
         print('Z log var:',z_log_var.shape)
         print('Coeffs:',coeffs)
         print('---------------------------------')
     
     #### KL Divergence loss ####
+    #kl_loss_i = 0.5*( -torch.log(torch.square(z_log_var)) - 1 + torch.square(z_log_var) + torch.square(z_mean) )
+    #kl_loss = torch.mean(torch.sum(kl_loss_i, dim=1)) # sum over the latent dimensions and mean over the batch
+    
     kl_loss_i = (1 + z_log_var - torch.square(z_mean) - torch.exp(z_log_var))
     kl_loss = torch.mean( -0.5 * (1/z_mean.shape[1]) * torch.sum(kl_loss_i, dim=1) ) # sum over the latent dimensions and mean over the batch
-    #losses['kl'] = kl_loss
+    losses['kl'] = kl_loss
     if verbose:
         print('KL Loss i:',kl_loss_i.shape)
         print('KL Loss:',kl_loss.shape)
@@ -346,6 +350,7 @@ def vae_loss_function(model_output, x, y, coeffs,verbose=False):
     element_loss_i = []
     wyckoff_site_loss_i = []
     wyckoff_multiplier_loss_i = []
+    disordered_site_loss_i = []
     for i in range(decoded_element.shape[1]):
         # Reconstruction loss of the elemental features
         # Use KL div loss to predict the prob. distribution (ref: https://discuss.pytorch.org/t/loss-function-for-predicting-a-distribution/156681)
@@ -359,7 +364,15 @@ def vae_loss_function(model_output, x, y, coeffs,verbose=False):
 
 
         # Wyckoof multiplier loss. Cross entropy loss
-        wyckoff_multiplier_loss_i.append(F.cross_entropy(decoded_wyckoff_multiplier[:,i,:], x[:,i,101:-30],reduction='none',))
+        wyckoff_multiplier_loss_i.append(F.cross_entropy(decoded_wyckoff_multiplier[:,i,:], x[:,i,101:-31],reduction='none',))
+        
+        # Disordered site loss. Cross entropy loss
+        #disordered_site_loss_i.append(torch.square(decoded_disordered_site[:,i,0] - x[:,i,-31]) )
+        #print(x[:,i,-31][:,None], decoded_disordered_site[:,i,:])
+        disordered_site_loss_i.append(F.binary_cross_entropy_with_logits(decoded_disordered_site[:,i,0], x[:,i,-31],reduction='none'))
+#        print(decoded_disordered_site[:,i,:].t().shape,x[:,i,-31][None,:].shape)
+        #print(F.binary_cross_entropy_with_logits(decoded_disordered_site[:,i,0], x[:,i,-31],reduction='none'))
+
     # Element loss
     element_loss_i = torch.stack(element_loss_i)
     element_loss = torch.mean(torch.sum(element_loss_i,dim=0)) # sum over the wyckoff_sites and mean over the batch
@@ -383,6 +396,14 @@ def vae_loss_function(model_output, x, y, coeffs,verbose=False):
     if verbose:
         print('Wyckoff Multiplier Loss i:',wyckoff_multiplier_loss_i.shape)
         print('Wyckoff Multiplier Loss:',wyckoff_multiplier_loss.shape)
+
+    # Disordered site loss. Cross entropy loss
+    disordered_site_loss_i = torch.stack(disordered_site_loss_i)
+    disordered_site_loss = torch.mean(torch.sum(disordered_site_loss_i,dim=0)) # sum over the wyckoff sites and mean over the batch
+    losses['disordered_site'] = disordered_site_loss
+    if verbose:
+        print('Disordered Site Loss i:',disordered_site_loss_i.shape)
+        print('Disordered Site Loss:',disordered_site_loss.shape)
     
     # Fractional coordinates reconstruction loss. Mean squared error loss
     frac_coords_loss_i = torch.mean(torch.square(decoded_frac_coords - x[:,:,-30:-27]),dim=2) # mse over the wyckoff sites 
@@ -422,23 +443,22 @@ def vae_loss_function(model_output, x, y, coeffs,verbose=False):
         print('---------------------------------')
 
     return losses
-coeffs = {'kl': 1000.0,
-          'element':200.0,
+coeffs = {'kl': 50.0,
+          'element':2000.0,
           'wyckoff_letter': 1.0,
         'wyckoff_multiplier': 1.0,
           'frac_coords': 1.0,
           'space_group':10.0,
-          'lattice':3.0}
-
+          'lattice':3.0,
+          'disordered_site':0.1}
 # Forward pass
-vae = VAE(feature_dim, wyckoff_dim, crystal_dim,verbose=False,kernel=kernel,stride=stride)
-out = vae(x_batch, y_batch)
+#ae = VAE(feature_dim, wyckoff_dim, crystal_dim,verbose=False,kernel=kernel,stride=stride)
+#out = vae(x_batch, y_batch)
 
 # Compute loss
-loss = vae_loss_function(out, x_batch, y_batch, coeffs,verbose=True);
-for key in loss:
-    print(f"{key}: {loss[key]}")
-
+#loss = vae_loss_function(out, x_batch, y_batch, coeffs,verbose=True);
+#for key in loss:
+#    print(f"{key}: {loss[key]}")
 ########################################################
 
 ########### Training loop ################################
@@ -448,10 +468,7 @@ for key in loss:
 #epochs = 50
 #lr = 0.001
 # Initialize the VAE
-feature_dim = X.shape[2]
-wyckoff_dim = X.shape[1]
 
-crystal_dim = Y.shape[1]
 vae = VAE(feature_dim, wyckoff_dim, crystal_dim,verbose=False,kernel=kernel,stride=stride)
 vae.to(device)
 
@@ -551,8 +568,8 @@ for epoch in tqdm(range(epochs)):
                         "coeffs": coeffs,
                         "epoch": epoch,
                         "total loss": best_val_loss,
-                        "val loss": val_loss_dict,
-                        "train loss": train_loss_dict,
+                        "val_loss": val_loss_dict,
+                        "train_loss": train_loss_dict,
                         },      
                         f'{folder_name}/best_vae_model.pth')
             print('Model saved')
