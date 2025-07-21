@@ -1,0 +1,40 @@
+data_
+
+_symmetry_space_group_name_H-M 'P63'
+_symmetry_Int_Tables_number                  173
+_symmetry_cell_setting                 hexagonal
+_cell_length_a              10.100
+_cell_length_b              10.100
+_cell_length_c               6.100
+_cell_angle_alpha           90.000
+_cell_angle_beta            90.000
+_cell_angle_gamma          120.000
+_cell_volume               538.894
+
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+1 'x, y, z'
+2 '-y, x-y, z'
+3 '-x+y, -x, z'
+4 '-x, -y, z+1/2'
+5 'y, -x+y, z+1/2'
+6 'x-y, x, z+1/2'
+
+loop_
+ _atom_site_label
+ _atom_site_type_symbol
+ _atom_site_symmetry_multiplicity
+ _atom_site_Wyckoff_symbol
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+La     La       6 c       0.767       0.128       0.750 1.0 
+Al     Al       2 b       0.667       0.333       1.170 1.0 
+Al     Al       2 a       0.000       0.000       0.512 0.65 
+S      S        6 c       0.820       0.083       0.263 1.0 
+S      S        6 c       0.889       0.412       0.028 1.0 
+S      S        2 b       0.667       0.333       0.534 1.0 
+#END
+

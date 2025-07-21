@@ -1,0 +1,27 @@
+
+output_dir = 'ICSD_dis_site_lowlr'
+dataset_atomic = '/home/energy/mahpe/Published_code/Dis-gen/New_atomic_features_icsd_all_new.npy'
+dataset_crystal = '/home/energy/mahpe/Published_code/Dis-gen/New_crystal_features_icsd_all_new.npy'
+test_ratio = 0.2
+val_ratio = 0.1
+batch_size = 64
+log_step = 1
+lr = 0.00005
+epochs = 2500
+
+kernel = [5,3,2]
+stride = [2,3,2]
+max_filter = 16
+latent_dim = 256
+
+[loss_weights]
+kl = 1.0
+element = 1000
+wyckoff_letter = 1.0
+wyckoff_multiplier = 1.0
+frac_coords = 1.0
+space_group = 10.0
+lattice = 3.0
+disordered_site = 0.1
+
+

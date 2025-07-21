@@ -1,0 +1,8 @@
+Loading latent space samples from Decoded_data/z_sample_NewICSD_test.npy
+Loading Y_scaler from file Y_scaler.gz
+Symmetry Matching Accuracy: 98.39%
+Number of failed items: 3 of 27008 processed
+Failed to parse 5990 structures out of 26571 Procentage: 22.54%
+Validity check failed for 1640 structures out of 26571 Procentage: 6.17%
+Oxidation state check failed for 6009 structures out of 26571 Procentage: 22.61%
+Total valid structures: 12932 out of 26571 Procentage: 48.67%

@@ -1,0 +1,69 @@
+--- Logging error ---
+Traceback (most recent call last):
+  File "/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/logging/__init__.py", line 1110, in emit
+    msg = self.format(record)
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/logging/__init__.py", line 953, in format
+    return fmt.format(record)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/logging/__init__.py", line 687, in format
+    record.message = record.getMessage()
+                     ^^^^^^^^^^^^^^^^^^^
+  File "/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/logging/__init__.py", line 377, in getMessage
+    msg = msg % self.args
+          ~~~~^~~~~~~~~~~
+TypeError: not all arguments converted during string formatting
+Call stack:
+  File "/home/energy/mahpe/Published_code/Dis-CSP/train.py", line 424, in <module>
+    main()
+  File "/home/energy/mahpe/Published_code/Dis-CSP/train.py", line 213, in main
+    logging.info("Train:", datasplits['train'].dataset.X.shape, datasplits['train'].dataset.Y.shape,)
+Message: 'Train:'
+Arguments: (torch.Size([135038, 9, 183]), torch.Size([135038, 236]))
+--- Logging error ---
+Traceback (most recent call last):
+  File "/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/logging/__init__.py", line 1110, in emit
+    msg = self.format(record)
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/logging/__init__.py", line 953, in format
+    return fmt.format(record)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/logging/__init__.py", line 687, in format
+    record.message = record.getMessage()
+                     ^^^^^^^^^^^^^^^^^^^
+  File "/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/logging/__init__.py", line 377, in getMessage
+    msg = msg % self.args
+          ~~~~^~~~~~~~~~~
+TypeError: not all arguments converted during string formatting
+Call stack:
+  File "/home/energy/mahpe/Published_code/Dis-CSP/train.py", line 424, in <module>
+    main()
+  File "/home/energy/mahpe/Published_code/Dis-CSP/train.py", line 214, in main
+    logging.info("Validation:", datasplits['val'].dataset.X.shape, datasplits['val'].dataset.Y.shape)
+Message: 'Validation:'
+Arguments: (torch.Size([135038, 9, 183]), torch.Size([135038, 236]))
+--- Logging error ---
+Traceback (most recent call last):
+  File "/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/logging/__init__.py", line 1110, in emit
+    msg = self.format(record)
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/logging/__init__.py", line 953, in format
+    return fmt.format(record)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/logging/__init__.py", line 687, in format
+    record.message = record.getMessage()
+                     ^^^^^^^^^^^^^^^^^^^
+  File "/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/logging/__init__.py", line 377, in getMessage
+    msg = msg % self.args
+          ~~~~^~~~~~~~~~~
+TypeError: not all arguments converted during string formatting
+Call stack:
+  File "/home/energy/mahpe/Published_code/Dis-CSP/train.py", line 424, in <module>
+    main()
+  File "/home/energy/mahpe/Published_code/Dis-CSP/train.py", line 215, in main
+    logging.info("Test:", datasplits['test'].dataset.X.shape, datasplits['test'].dataset.Y.shape)
+Message: 'Test:'
+Arguments: (torch.Size([135038, 9, 183]), torch.Size([135038, 236]))
+  0%|          | 0/2500 [00:00<?, ?it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/torch/nn/_reduction.py:42: UserWarning: size_average and reduce args will be deprecated, please use reduction='none' instead.
+  warnings.warn(warning.format(ret))
+  0%|          | 1/2500 [01:11<49:30:53, 71.33s/it]  0%|          | 2/2500 [02:18<47:49:59, 68.93s/it]  0%|          | 3/2500 [03:26<47:31:02, 68.51s/it]slurmstepd: error: *** JOB 8796431 ON s003 CANCELLED AT 2025-07-01T13:28:57 ***
