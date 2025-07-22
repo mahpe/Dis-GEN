@@ -1,8 +1,0 @@
-Loading latent space samples from Decoded_data/z_samples_gmm.npy
-Loading Y_scaler from file Y_scaler.gz
-Symmetry Matching Accuracy: 20.35%
-Number of failed items: 460 of 27008 processed
-Failed to parse 1056 structures out of 5035 Procentage: 20.97%
-Validity check failed for 345 structures out of 5035 Procentage: 6.85%
-Oxidation state check failed for 1662 structures out of 5035 Procentage: 33.01%
-Total valid structures: 1972 out of 5035 Procentage: 39.17%

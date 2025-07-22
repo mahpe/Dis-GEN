@@ -1,8 +1,0 @@
-Loading latent space samples from Decoded_data/z_samples_kde.npy
-Loading Y_scaler from file Y_scaler.gz
-Symmetry Matching Accuracy: 98.79%
-Number of failed items: 16 of 27008 processed
-Failed to parse 5675 structures out of 26666 Procentage: 21.28%
-Validity check failed for 2006 structures out of 26666 Procentage: 7.52%
-Oxidation state check failed for 6242 structures out of 26666 Procentage: 23.41%
-Total valid structures: 12743 out of 26666 Procentage: 47.79%

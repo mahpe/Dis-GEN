@@ -1,583 +1,0 @@
-2025-07-05 08:32:45.614407: I tensorflow/core/util/port.cc:111] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-2025-07-05 08:32:46.218765: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
-2025-07-05 08:32:47.094335: E tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:9342] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
-2025-07-05 08:32:47.094755: E tensorflow/compiler/xla/stream_executor/cuda/cuda_fft.cc:609] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
-2025-07-05 08:32:47.098356: E tensorflow/compiler/xla/stream_executor/cuda/cuda_blas.cc:1518] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
-2025-07-05 08:32:47.566466: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
-To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2025-07-05 08:33:01.812832: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
-/home/energy/mahpe/Published_code/Dis-CSP/dis_csp/generation.py:148: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
-  'disordered_site': F.sigmoid(torch.tensor(disordered_site)).cpu().detach().numpy(),
-  0%|          | 0/27008 [00:00<?, ?it/s]  1%|          | 175/27008 [00:00<00:15, 1694.53it/s]  2%|▏         | 463/27008 [00:00<00:11, 2235.73it/s]  3%|▎         | 685/27008 [00:00<00:13, 2005.83it/s]  3%|▎         | 904/27008 [00:00<00:15, 1735.49it/s]  4%|▍         | 1083/27008 [00:06<04:49, 89.62it/s]   5%|▍         | 1278/27008 [00:06<03:20, 128.19it/s]  6%|▌         | 1602/27008 [00:07<01:57, 215.73it/s]  6%|▋         | 1746/27008 [00:09<02:50, 147.85it/s]  7%|▋         | 1935/27008 [00:10<02:33, 163.04it/s]  8%|▊         | 2119/27008 [00:10<02:15, 183.88it/s]  9%|▉         | 2478/27008 [00:10<01:19, 308.81it/s] 10%|▉         | 2683/27008 [00:10<01:00, 398.86it/s] 11%|█         | 2962/27008 [00:12<01:21, 295.45it/s] 12%|█▏        | 3146/27008 [00:12<01:06, 356.75it/s] 12%|█▏        | 3247/27008 [00:12<01:05, 362.37it/s] 14%|█▎        | 3704/27008 [00:12<00:34, 680.93it/s] 15%|█▌        | 4063/27008 [00:13<00:23, 965.03it/s] 16%|█▌        | 4307/27008 [00:13<00:27, 818.56it/s] 18%|█▊        | 4763/27008 [00:14<00:36, 617.36it/s] 18%|█▊        | 4908/27008 [00:14<00:34, 636.50it/s] 19%|█▉        | 5064/27008 [00:14<00:31, 692.18it/s] 19%|█▉        | 5249/27008 [00:14<00:29, 738.16it/s] 21%|██        | 5733/27008 [00:15<00:17, 1241.23it/s] 22%|██▏       | 5952/27008 [00:15<00:20, 1030.55it/s] 23%|██▎       | 6245/27008 [00:15<00:16, 1279.52it/s] 24%|██▍       | 6507/27008 [00:15<00:13, 1477.57it/s] 25%|██▍       | 6722/27008 [00:15<00:14, 1376.11it/s] 26%|██▌       | 7007/27008 [00:15<00:12, 1600.90it/s] 27%|██▋       | 7210/27008 [00:16<00:15, 1274.07it/s] 27%|██▋       | 7414/27008 [00:16<00:14, 1381.05it/s] 28%|██▊       | 7585/27008 [00:16<00:16, 1191.57it/s] 29%|██▉       | 7956/27008 [00:16<00:11, 1674.56it/s] 30%|███       | 8224/27008 [00:16<00:09, 1890.67it/s] 31%|███▏      | 8506/27008 [00:16<00:09, 2037.20it/s] 32%|███▏      | 8740/27008 [00:17<00:10, 1714.41it/s] 33%|███▎      | 8940/27008 [00:17<00:20, 886.14it/s]  35%|███▍      | 9327/27008 [00:17<00:13, 1291.56it/s] 35%|███▌      | 9549/27008 [00:18<00:28, 612.27it/s]  37%|███▋      | 9877/27008 [00:18<00:20, 851.74it/s] 37%|███▋      | 10089/27008 [00:18<00:17, 993.27it/s] 38%|███▊      | 10300/27008 [00:19<00:18, 907.56it/s] 39%|███▉      | 10469/27008 [00:19<00:18, 879.24it/s] 39%|███▉      | 10612/27008 [00:19<00:17, 919.39it/s] 40%|███▉      | 10745/27008 [00:19<00:16, 985.99it/s] 40%|████      | 10878/27008 [00:19<00:15, 1026.97it/s] 41%|████      | 11007/27008 [00:19<00:14, 1070.07it/s] 41%|████▏     | 11166/27008 [00:19<00:13, 1188.97it/s] 42%|████▏     | 11304/27008 [00:19<00:13, 1203.04it/s] 43%|████▎     | 11731/27008 [00:20<00:09, 1691.14it/s] 45%|████▍     | 12138/27008 [00:20<00:06, 2146.46it/s] 46%|████▌     | 12397/27008 [00:20<00:06, 2199.08it/s] 47%|████▋     | 12621/27008 [00:20<00:08, 1695.57it/s] 48%|████▊     | 13013/27008 [00:20<00:06, 2169.11it/s] 50%|████▉     | 13479/27008 [00:20<00:05, 2672.26it/s] 51%|█████     | 13775/27008 [00:21<00:06, 2192.08it/s] 53%|█████▎    | 14291/27008 [00:21<00:04, 2843.49it/s] 54%|█████▍    | 14622/27008 [00:21<00:04, 2763.06it/s] 55%|█████▌    | 14931/27008 [00:21<00:05, 2092.05it/s] 57%|█████▋    | 15416/27008 [00:21<00:04, 2651.05it/s] 58%|█████▊    | 15739/27008 [00:21<00:04, 2262.37it/s] 59%|█████▉    | 16013/27008 [00:21<00:05, 2141.19it/s] 60%|██████    | 16275/27008 [00:23<00:18, 592.84it/s]  61%|██████▏   | 16543/27008 [00:23<00:14, 731.93it/s] 63%|██████▎   | 16884/27008 [00:23<00:10, 962.85it/s] 64%|██████▍   | 17365/27008 [00:23<00:06, 1385.64it/s] 65%|██████▌   | 17642/27008 [00:23<00:06, 1467.03it/s] 67%|██████▋   | 17989/27008 [00:23<00:05, 1780.78it/s] 68%|██████▊   | 18371/27008 [00:24<00:04, 2153.43it/s] 69%|██████▉   | 18680/27008 [00:24<00:04, 1882.64it/s] 70%|███████   | 18939/27008 [00:25<00:14, 545.74it/s]  71%|███████   | 19125/27008 [00:25<00:12, 631.06it/s] 72%|███████▏  | 19542/27008 [00:26<00:08, 851.48it/s] 74%|███████▎  | 19909/27008 [00:26<00:06, 1138.09it/s] 75%|███████▍  | 20144/27008 [00:26<00:05, 1224.24it/s] 75%|███████▌  | 20358/27008 [00:26<00:06, 980.34it/s]  76%|███████▌  | 20525/27008 [00:28<00:19, 338.06it/s] 77%|███████▋  | 20701/27008 [00:29<00:22, 277.72it/s] 78%|███████▊  | 21062/27008 [00:29<00:13, 441.66it/s] 79%|███████▊  | 21240/27008 [00:30<00:18, 313.48it/s] 81%|████████  | 21802/27008 [00:30<00:08, 581.51it/s] 81%|████████▏ | 21995/27008 [00:31<00:07, 661.20it/s] 82%|████████▏ | 22198/27008 [00:31<00:08, 573.63it/s] 84%|████████▎ | 22557/27008 [00:31<00:05, 826.13it/s] 84%|████████▍ | 22757/27008 [00:31<00:04, 912.40it/s] 85%|████████▌ | 23034/27008 [00:31<00:03, 1146.15it/s] 87%|████████▋ | 23382/27008 [00:32<00:02, 1504.78it/s] 88%|████████▊ | 23812/27008 [00:32<00:01, 1994.35it/s] 89%|████████▉ | 24111/27008 [00:32<00:01, 2154.74it/s] 91%|█████████ | 24444/27008 [00:32<00:01, 2311.74it/s] 92%|█████████▏| 24731/27008 [00:32<00:01, 1864.27it/s] 92%|█████████▏| 24969/27008 [00:32<00:01, 1968.73it/s] 93%|█████████▎| 25207/27008 [00:33<00:01, 1329.88it/s] 94%|█████████▍| 25395/27008 [00:34<00:04, 383.92it/s]  95%|█████████▌| 25787/27008 [00:34<00:02, 602.86it/s] 97%|█████████▋| 26117/27008 [00:34<00:01, 819.94it/s] 98%|█████████▊| 26362/27008 [00:35<00:00, 862.05it/s] 98%|█████████▊| 26598/27008 [00:35<00:00, 961.08it/s]100%|█████████▉| 26930/27008 [00:35<00:00, 1264.52it/s]100%|██████████| 27008/27008 [00:35<00:00, 762.39it/s] 
-  0%|          | 0/1552 [00:00<?, ?it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Skipping relative stoichiometry check because CIF does not contain formula keys.
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/spglib/spglib.py:115: DeprecationWarning: dict interface (SpglibDataset['international']) is deprecated.Use attribute interface ({self.__class__.__name__}.{key}) instead
-  warnings.warn(
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/spglib/spglib.py:115: DeprecationWarning: dict interface (SpglibDataset['number']) is deprecated.Use attribute interface ({self.__class__.__name__}.{key}) instead
-  warnings.warn(
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/spglib/spglib.py:115: DeprecationWarning: dict interface (SpglibDataset['equivalent_atoms']) is deprecated.Use attribute interface ({self.__class__.__name__}.{key}) instead
-  warnings.warn(
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/spglib/spglib.py:115: DeprecationWarning: dict interface (SpglibDataset['wyckoffs']) is deprecated.Use attribute interface ({self.__class__.__name__}.{key}) instead
-  warnings.warn(
-  0%|          | 1/1552 [00:00<06:40,  3.88it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Skipping relative stoichiometry check because CIF does not contain formula keys.
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/spglib/spglib.py:115: DeprecationWarning: dict interface (SpglibDataset['international']) is deprecated.Use attribute interface ({self.__class__.__name__}.{key}) instead
-  warnings.warn(
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/spglib/spglib.py:115: DeprecationWarning: dict interface (SpglibDataset['number']) is deprecated.Use attribute interface ({self.__class__.__name__}.{key}) instead
-  warnings.warn(
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/spglib/spglib.py:115: DeprecationWarning: dict interface (SpglibDataset['equivalent_atoms']) is deprecated.Use attribute interface ({self.__class__.__name__}.{key}) instead
-  warnings.warn(
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/spglib/spglib.py:115: DeprecationWarning: dict interface (SpglibDataset['wyckoffs']) is deprecated.Use attribute interface ({self.__class__.__name__}.{key}) instead
-  warnings.warn(
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([2.0, 0.56]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1223: UserWarning: No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: 2 fractional coordinates rounded to ideal values to avoid issues with finite precision.
-Some occupancies ([2.0, 0.56]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
-  1%|          | 10/1552 [00:00<00:45, 33.65it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: 2 fractional coordinates rounded to ideal values to avoid issues with finite precision.
-Skipping relative stoichiometry check because CIF does not contain formula keys.
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1141: UserWarning: Missing elements O from PMG structure composition
-  warnings.warn(cif_failure_reason)
-  1%|▏         | 20/1552 [00:00<00:27, 55.13it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([2.0, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([2.0, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
-  2%|▏         | 30/1552 [00:00<00:23, 65.51it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.8]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.8]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: 4 fractional coordinates rounded to ideal values to avoid issues with finite precision.
-Skipping relative stoichiometry check because CIF does not contain formula keys.
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
-  3%|▎         | 43/1552 [00:04<03:31,  7.15it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.09]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.09]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
-  3%|▎         | 43/1552 [00:14<03:31,  7.15it/s]  3%|▎         | 52/1552 [00:29<24:26,  1.02it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([2.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: 4 fractional coordinates rounded to ideal values to avoid issues with finite precision.
-Some occupancies ([2.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([2.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
-  4%|▍         | 63/1552 [00:29<15:46,  1.57it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: 1 fractional coordinates rounded to ideal values to avoid issues with finite precision.
-Skipping relative stoichiometry check because CIF does not contain formula keys.
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
-  5%|▍         | 70/1552 [00:29<11:58,  2.06it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: 8 fractional coordinates rounded to ideal values to avoid issues with finite precision.
-Skipping relative stoichiometry check because CIF does not contain formula keys.
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.6700000000000002]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.6700000000000002]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
-  5%|▍         | 77/1552 [00:30<08:58,  2.74it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: 5 fractional coordinates rounded to ideal values to avoid issues with finite precision.
-Skipping relative stoichiometry check because CIF does not contain formula keys.
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
-  6%|▌         | 90/1552 [00:30<05:21,  4.55it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.62]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.62]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
-  6%|▋         | 99/1552 [00:30<04:13,  5.74it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([2.0, 1.0, 1.0, 1.0, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([2.0, 1.0, 1.0, 1.0, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: 3 fractional coordinates rounded to ideal values to avoid issues with finite precision.
-Skipping relative stoichiometry check because CIF does not contain formula keys.
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
-  7%|▋         | 109/1552 [00:30<02:58,  8.10it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.4700000000000004]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.4700000000000004]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
-  8%|▊         | 117/1552 [00:30<02:15, 10.59it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.82, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.82, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([3.0, 2.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([3.0, 2.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
-  8%|▊         | 127/1552 [00:30<01:36, 14.74it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.0, 2.0, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.0, 2.0, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
-  9%|▊         | 135/1552 [00:31<01:16, 18.60it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.0, 1.0, 2.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.0, 1.0, 2.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
-  9%|▉         | 147/1552 [00:31<00:52, 26.53it/s] 10%|█         | 156/1552 [00:31<00:42, 32.54it/s] 11%|█         | 165/1552 [00:31<00:36, 38.24it/s] 11%|█▏        | 176/1552 [00:31<00:28, 48.66it/s] 12%|█▏        | 187/1552 [00:31<00:23, 58.87it/s] 13%|█▎        | 197/1552 [00:31<00:22, 60.20it/s] 13%|█▎        | 206/1552 [00:31<00:20, 66.23it/s] 14%|█▍        | 216/1552 [00:32<00:18, 72.91it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.0, 2.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.0, 2.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 14%|█▍        | 225/1552 [00:32<00:18, 72.72it/s] 15%|█▌        | 234/1552 [00:32<00:18, 72.30it/s] 16%|█▌        | 242/1552 [00:32<00:19, 66.43it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([2.0, 1.0, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([2.0, 1.0, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 17%|█▋        | 258/1552 [00:32<00:15, 83.37it/s] 17%|█▋        | 270/1552 [00:32<00:14, 88.28it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: 6 fractional coordinates rounded to ideal values to avoid issues with finite precision.
-Skipping relative stoichiometry check because CIF does not contain formula keys.
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([2.88]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([2.88]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 18%|█▊        | 285/1552 [00:32<00:12, 101.64it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.4000000000000001, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.4000000000000001, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 19%|█▉        | 300/1552 [00:32<00:11, 112.22it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([0.87, 1.48]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([0.87, 1.48]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 20%|██        | 312/1552 [00:33<00:12, 101.32it/s] 21%|██        | 323/1552 [00:33<00:12, 102.20it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: 2 fractional coordinates rounded to ideal values to avoid issues with finite precision.
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 22%|██▏       | 334/1552 [00:33<00:23, 52.60it/s]  22%|██▏       | 343/1552 [00:34<00:45, 26.66it/s] 22%|██▏       | 349/1552 [00:34<00:47, 25.54it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.76, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.76, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 23%|██▎       | 358/1552 [00:34<00:37, 31.88it/s] 24%|██▍       | 371/1552 [00:34<00:26, 44.13it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.7400000000000002, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.7400000000000002, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.9100000000000001]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.9100000000000001]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 24%|██▍       | 379/1552 [00:35<00:23, 49.40it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.8900000000000001]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.8900000000000001]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 25%|██▍       | 387/1552 [00:35<00:22, 50.66it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.76]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.76]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([3.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: 6 fractional coordinates rounded to ideal values to avoid issues with finite precision.
-Some occupancies ([3.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 26%|██▌       | 399/1552 [00:35<00:18, 63.67it/s] 26%|██▋       | 410/1552 [00:35<00:16, 67.59it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.53]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.53]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 27%|██▋       | 422/1552 [00:35<00:14, 77.99it/s] 28%|██▊       | 432/1552 [00:35<00:16, 66.54it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.2100000000000002, 0.77]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.2100000000000002, 0.77]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.83, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.83, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 28%|██▊       | 441/1552 [00:35<00:15, 70.61it/s] 29%|██▉       | 450/1552 [00:36<00:43, 25.42it/s] 30%|██▉       | 462/1552 [00:36<00:32, 33.95it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.83, 0.8999999999999999, 0.13]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.83, 0.8999999999999999, 0.13]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.88, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.88, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 30%|███       | 469/1552 [00:38<01:27, 12.39it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.7000000000000002]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.7000000000000002]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 31%|███       | 483/1552 [00:38<00:58, 18.41it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: 26 fractional coordinates rounded to ideal values to avoid issues with finite precision.
-Skipping relative stoichiometry check because CIF does not contain formula keys.
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 31%|███       | 483/1552 [00:54<00:58, 18.41it/s] 32%|███▏      | 489/1552 [03:28<1:36:57,  5.47s/it]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([0.8200000000000001, 1.24, 0.67]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([0.8200000000000001, 1.24, 0.67]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.65]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.65]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 32%|███▏      | 504/1552 [03:28<56:43,  3.25s/it]   33%|███▎      | 511/1552 [03:28<44:22,  2.56s/it]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.81, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: 2 fractional coordinates rounded to ideal values to avoid issues with finite precision.
-Some occupancies ([1.81, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 33%|███▎      | 518/1552 [03:28<33:52,  1.97s/it] 34%|███▍      | 524/1552 [03:28<26:16,  1.53s/it]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: 14 fractional coordinates rounded to ideal values to avoid issues with finite precision.
-Skipping relative stoichiometry check because CIF does not contain formula keys.
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 34%|███▍      | 533/1552 [03:31<19:30,  1.15s/it] 35%|███▍      | 537/1552 [03:31<16:12,  1.04it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.8199999999999998]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.8199999999999998]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 35%|███▍      | 541/1552 [03:32<13:18,  1.27it/s] 36%|███▌      | 553/1552 [03:32<07:13,  2.31it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: 2 fractional coordinates rounded to ideal values to avoid issues with finite precision.
-Some occupancies ([1.0, 2.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 36%|███▋      | 565/1552 [03:32<04:23,  3.75it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.0, 1.97, 1.0, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.0, 1.97, 1.0, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 37%|███▋      | 572/1552 [03:32<03:21,  4.87it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: 2 fractional coordinates rounded to ideal values to avoid issues with finite precision.
-Some occupancies ([2.0, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 37%|███▋      | 581/1552 [03:32<02:21,  6.87it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.8900000000000001, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: 3 fractional coordinates rounded to ideal values to avoid issues with finite precision.
-Some occupancies ([1.8900000000000001, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 38%|███▊      | 593/1552 [03:32<01:30, 10.58it/s] 39%|███▉      | 602/1552 [03:33<01:08, 13.80it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.98, 1.96]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.98, 1.96]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 40%|███▉      | 614/1552 [03:33<00:46, 20.01it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.73]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.73]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([3.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 40%|████      | 628/1552 [03:33<00:31, 29.13it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.6]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.6]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 41%|████      | 638/1552 [03:33<00:25, 35.75it/s] 42%|████▏     | 648/1552 [03:33<00:20, 43.28it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: 10 fractional coordinates rounded to ideal values to avoid issues with finite precision.
-Skipping relative stoichiometry check because CIF does not contain formula keys.
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 42%|████▏     | 658/1552 [03:33<00:20, 42.90it/s] 44%|████▎     | 676/1552 [03:33<00:13, 63.31it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([0.73, 2.0, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([0.73, 2.0, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 45%|████▍     | 692/1552 [03:33<00:11, 77.78it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.7]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.7]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 45%|████▌     | 704/1552 [03:34<00:10, 82.16it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: 5 fractional coordinates rounded to ideal values to avoid issues with finite precision.
-Some occupancies ([1.0, 2.0, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 46%|████▋     | 719/1552 [03:34<00:08, 96.01it/s] 47%|████▋     | 735/1552 [03:34<00:07, 106.76it/s]spglib: ssm_get_exact_positions failed.
-spglib: get_bravais_exact_positions_and_lattice failed.
-spglib: ssm_get_exact_positions failed.
-spglib: get_bravais_exact_positions_and_lattice failed.
-spglib: ssm_get_exact_positions failed.
-spglib: get_bravais_exact_positions_and_lattice failed.
-spglib: ssm_get_exact_positions failed.
-spglib: get_bravais_exact_positions_and_lattice failed.
-spglib: ssm_get_exact_positions failed.
-spglib: get_bravais_exact_positions_and_lattice failed.
-spglib: ssm_get_exact_positions failed.
-spglib: get_bravais_exact_positions_and_lattice failed.
-spglib: ssm_get_exact_positions failed.
-spglib: get_bravais_exact_positions_and_lattice failed.
-spglib: ssm_get_exact_positions failed.
-spglib: get_bravais_exact_positions_and_lattice failed.
- 48%|████▊     | 748/1552 [03:34<00:08, 90.93it/s] /home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([2.0, 0.9]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([2.0, 0.9]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 49%|████▉     | 759/1552 [03:34<00:08, 92.36it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.79, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.79, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 50%|████▉     | 770/1552 [03:34<00:08, 89.57it/s] 50%|█████     | 780/1552 [03:35<00:12, 63.11it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.0, 2.0, 1.0, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.0, 2.0, 1.0, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.36, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.36, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 51%|█████     | 793/1552 [03:35<00:10, 72.14it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: 6 fractional coordinates rounded to ideal values to avoid issues with finite precision.
-Some occupancies ([2.0, 1.0, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([0.95, 2.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([0.95, 2.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 52%|█████▏    | 802/1552 [03:35<00:09, 75.44it/s] 52%|█████▏    | 811/1552 [03:35<00:10, 73.37it/s] 53%|█████▎    | 827/1552 [03:35<00:07, 92.98it/s] 54%|█████▍    | 838/1552 [03:35<00:07, 91.22it/s] 55%|█████▍    | 848/1552 [03:36<00:20, 34.70it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: 7 fractional coordinates rounded to ideal values to avoid issues with finite precision.
-Skipping relative stoichiometry check because CIF does not contain formula keys.
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 55%|█████▌    | 861/1552 [03:36<00:15, 45.48it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.9]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.9]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 56%|█████▋    | 873/1552 [03:36<00:12, 54.02it/s] 57%|█████▋    | 884/1552 [03:36<00:10, 61.84it/s] 58%|█████▊    | 894/1552 [03:36<00:10, 60.23it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.6900000000000002]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.6900000000000002]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.75, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.75, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 58%|█████▊    | 906/1552 [03:37<00:09, 71.44it/s] 59%|█████▉    | 916/1552 [03:37<00:09, 63.78it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.5200000000000005]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.5200000000000005]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 60%|█████▉    | 926/1552 [03:37<00:08, 70.48it/s] 60%|██████    | 935/1552 [03:37<00:09, 67.47it/s] 61%|██████    | 943/1552 [03:38<00:25, 24.35it/s] 62%|██████▏   | 955/1552 [03:38<00:18, 31.97it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.4000000000000001, 0.99]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.4000000000000001, 0.99]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: 12 fractional coordinates rounded to ideal values to avoid issues with finite precision.
-Skipping relative stoichiometry check because CIF does not contain formula keys.
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 62%|██████▎   | 970/1552 [03:38<00:12, 45.49it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.1199999999999999]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.1199999999999999]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 63%|██████▎   | 985/1552 [03:38<00:09, 59.60it/s] 64%|██████▍   | 997/1552 [03:38<00:08, 66.35it/s] 65%|██████▌   | 1010/1552 [03:39<00:06, 78.02it/s] 66%|██████▌   | 1021/1552 [03:39<00:07, 74.49it/s] 66%|██████▋   | 1031/1552 [03:39<00:07, 66.30it/s] 67%|██████▋   | 1046/1552 [03:39<00:06, 82.79it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([3.0, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([3.0, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 68%|██████▊   | 1060/1552 [03:39<00:05, 89.67it/s] 69%|██████▉   | 1071/1552 [03:39<00:05, 91.58it/s] 70%|██████▉   | 1083/1552 [03:39<00:04, 97.43it/s] 70%|███████   | 1094/1552 [03:40<00:06, 75.15it/s] 71%|███████   | 1103/1552 [03:40<00:05, 75.42it/s] 72%|███████▏  | 1112/1552 [03:40<00:05, 76.31it/s] 72%|███████▏  | 1121/1552 [03:40<00:05, 77.13it/s] 73%|███████▎  | 1130/1552 [03:40<00:05, 75.54it/s] 74%|███████▎  | 1141/1552 [03:40<00:04, 83.99it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.99, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.99, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 74%|███████▍  | 1153/1552 [03:40<00:04, 89.80it/s] 75%|███████▍  | 1163/1552 [03:40<00:04, 83.17it/s] 76%|███████▌  | 1173/1552 [03:41<00:04, 85.42it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.87, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.87, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 76%|███████▋  | 1185/1552 [03:41<00:04, 91.34it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.97, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.97, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 77%|███████▋  | 1195/1552 [03:41<00:04, 86.14it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([0.93, 2.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([0.93, 2.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 78%|███████▊  | 1204/1552 [03:41<00:04, 79.74it/s] 78%|███████▊  | 1213/1552 [03:45<00:47,  7.18it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: 2 fractional coordinates rounded to ideal values to avoid issues with finite precision.
-Some occupancies ([2.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 79%|███████▊  | 1219/1552 [03:47<00:57,  5.74it/s] 79%|███████▉  | 1224/1552 [03:48<00:55,  5.89it/s] 79%|███████▉  | 1230/1552 [03:48<00:42,  7.63it/s] 80%|███████▉  | 1237/1552 [03:48<00:30, 10.38it/s] 80%|████████  | 1243/1552 [03:48<00:23, 13.27it/s] 81%|████████  | 1256/1552 [03:48<00:13, 21.71it/s] 81%|████████▏ | 1263/1552 [03:51<00:37,  7.81it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: 4 fractional coordinates rounded to ideal values to avoid issues with finite precision.
-Some occupancies ([1.0, 2.0, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.0, 1.0, 1.0, 2.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.0, 1.0, 1.0, 2.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 82%|████████▏ | 1272/1552 [03:51<00:25, 11.00it/s] 82%|████████▏ | 1280/1552 [03:51<00:18, 14.67it/s] 83%|████████▎ | 1292/1552 [03:51<00:11, 21.99it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.57, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.57, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: 9 fractional coordinates rounded to ideal values to avoid issues with finite precision.
-Skipping relative stoichiometry check because CIF does not contain formula keys.
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.8699999999999999]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.8699999999999999]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 84%|████████▍ | 1300/1552 [03:51<00:09, 26.82it/s] 84%|████████▍ | 1309/1552 [03:51<00:07, 33.85it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([0.92, 1.9300000000000002]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([0.92, 1.9300000000000002]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 85%|████████▍ | 1317/1552 [03:51<00:06, 38.64it/s] 86%|████████▌ | 1330/1552 [03:52<00:04, 53.16it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.8099999999999998]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.8099999999999998]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 86%|████████▋ | 1340/1552 [03:52<00:03, 60.98it/s] 86%|████████▋ | 1340/1552 [04:04<00:03, 60.98it/s] 87%|████████▋ | 1348/1552 [06:44<18:43,  5.51s/it]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1141: UserWarning: Missing elements Pt, H from PMG structure composition
-  warnings.warn(cif_failure_reason)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.88]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.88]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 88%|████████▊ | 1358/1552 [06:44<12:14,  3.79s/it] 88%|████████▊ | 1373/1552 [06:44<06:45,  2.27s/it] 89%|████████▉ | 1384/1552 [06:44<04:28,  1.60s/it] 90%|█████████ | 1397/1552 [06:44<02:45,  1.07s/it]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.71, 1.0, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.71, 1.0, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([2.0, 1.0, 0.7100000000000001]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([2.0, 1.0, 0.7100000000000001]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 91%|█████████ | 1408/1552 [06:44<01:50,  1.31it/s] 91%|█████████ | 1408/1552 [06:54<01:50,  1.31it/s] 91%|█████████ | 1412/1552 [06:54<02:18,  1.01it/s] 91%|█████████▏| 1420/1552 [06:55<01:36,  1.37it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: 6 fractional coordinates rounded to ideal values to avoid issues with finite precision.
-Some occupancies ([1.0, 2.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.5, 1.0, 2.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.5, 1.0, 2.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 92%|█████████▏| 1435/1552 [06:55<00:49,  2.34it/s] 93%|█████████▎| 1446/1552 [06:55<00:31,  3.33it/s] 94%|█████████▍| 1456/1552 [06:55<00:21,  4.56it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.0, 1.77, 1.0, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.0, 1.77, 1.0, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.85, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.85, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 94%|█████████▍| 1465/1552 [06:55<00:14,  6.06it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.0, 1.9100000000000001]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.0, 1.9100000000000001]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 95%|█████████▍| 1474/1552 [06:55<00:09,  8.13it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.33, 1.0, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: Some occupancies ([1.33, 1.0, 1.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.6400000000000001]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: 12 fractional coordinates rounded to ideal values to avoid issues with finite precision.
-Some occupancies ([1.6400000000000001]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 96%|█████████▌| 1487/1552 [06:55<00:05, 12.27it/s] 96%|█████████▋| 1497/1552 [06:55<00:03, 16.17it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1021: UserWarning: Some occupancies ([1.7000000000000002, 2.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-  warnings.warn(msg)
-/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: 4 fractional coordinates rounded to ideal values to avoid issues with finite precision.
-Some occupancies ([1.7000000000000002, 2.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
- 97%|█████████▋| 1511/1552 [06:56<00:01, 23.73it/s] 98%|█████████▊| 1521/1552 [06:56<00:01, 29.31it/s] 99%|█████████▊| 1531/1552 [06:56<00:00, 36.45it/s]/home/energy/mahpe/anaconda3/envs/env_sylg/lib/python3.11/site-packages/pymatgen/io/cif.py:1229: UserWarning: Issues encountered while parsing CIF: 3 fractional coordinates rounded to ideal values to avoid issues with finite precision.
-Some occupancies ([2.0]) sum to > 1! If they are within the occupancy_tolerance, they will be rescaled. The current occupancy_tolerance is set to: 1.0
-No structure parsed for section 1 in CIF.
-Species occupancies sum to more than 1!
-  warnings.warn("Issues encountered while parsing CIF: " + "\n".join(self.warnings))
-100%|█████████▉| 1545/1552 [06:56<00:00, 49.30it/s]100%|██████████| 1552/1552 [06:56<00:00,  3.73it/s]

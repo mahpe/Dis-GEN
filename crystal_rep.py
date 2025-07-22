@@ -1,11 +1,9 @@
 from pymatgen.core import Structure
 import json
 import numpy as np
-import sys, pickle
+import  pickle
 from pymatgen.core import Structure
-
-sys.path.append('/home/energy/mahpe/Published_code/Dis-CSP/dis_csp')
-from dis_csp.structure_rep import Crystal_representation
+from dis_gen.structure_rep import Crystal_representation
 
 def main():
     

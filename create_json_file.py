@@ -6,7 +6,7 @@ from pymatgen.core import  Structure
 import json
 import numpy as np
 import pandas as pd
-import sys, re
+import re
 from pymatgen.core import Structure
 from pymatgen.symmetry.analyzer import SpacegroupAnalyzer
 

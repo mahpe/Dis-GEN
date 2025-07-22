@@ -20,10 +20,9 @@ from sklearn.model_selection import train_test_split
 import pandas as pd
 import json
 
-sys.path.append('/home/energy/mahpe/Published_code/Dis-CSP/dis_csp')
-from dis_csp.model import CrystalDataset, VAE
-from dis_csp.loss_function import vae_loss_function
-from dis_csp.utils import split_data
+from dis_gen.model import CrystalDataset, VAE
+from dis_gen.loss_function import vae_loss_function
+from dis_gen.utils import split_data
 # Define function to get arguments
 def get_arguments(arg_list=None):
     parser = argparse.ArgumentParser(

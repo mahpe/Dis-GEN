@@ -54,8 +54,6 @@ from sklearn.mixture import GaussianMixture
 from pyxtal.symmetry import Group
 from sklearn.neighbors import KernelDensity
 import torch
-
-sys.path.append('/home/energy/mahpe/Published_code/Dis-CSP/dis_csp')
 from dis_csp.model import VAE
 # Load the VAE model
 model_dir = 'New_Kl5_ICSD_dis_site_middle_KL_element1000_lr_5e-06_epochs_2500_batch_64_test_0.2_val_0.1'

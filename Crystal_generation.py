@@ -1,61 +1,16 @@
-from pymatgen.core import  Structure
-from pymatgen.symmetry.analyzer import SpacegroupAnalyzer
-
-from tqdm import tqdm
-from pymatgen.core import Composition, Structure
-from typing import List, Tuple
-
-import re, joblib, json
 import numpy as np
-from pyxtal.symmetry import Group
-import pickle
-import pandas as pd
-import numpy as np
-import sys, os
-import ast
-import pickle
-import matplotlib.pyplot as plt
-import seaborn as sns
-from sklearn.metrics import mean_absolute_error as mae
-from sklearn.metrics import roc_curve, auc,accuracy_score
-
-from sklearn.model_selection import train_test_split
-from sklearn.model_selection import cross_val_score # for cross-validation
-from datetime import datetime 
-from sklearn.preprocessing import LabelEncoder,OneHotEncoder, StandardScaler
-from pymatgen.core import Composition, Structure
-from pymatgen.symmetry.analyzer import SpacegroupAnalyzer
-from pymatgen.io.cif import CifParser
-from mpl_toolkits.axes_grid1 import make_axes_locatable
-from pymatgen.io.cif import CifWriter
 import torch
-import torch.nn as nn
-import torch.nn.functional as F
-from torch.utils.data import DataLoader, Dataset
-from torch.optim import Adam
-import math
-from tqdm import tqdm
-from sklearn.neighbors import KernelDensity
+from dis_gen.model import VAE
+from dis_gen.generation import decode_samples, generate_wyckoffgene, generate_cif_files
+import joblib, json, os
+import warnings
+warnings.filterwarnings("ignore")
 
-sys.path.append('/home/energy/mahpe/Published_code/Dis-CSP/dis_csp')
-
-from dis_csp.model import CrystalDataset, VAE
-from dis_csp.generation import decode_samples, generate_wyckoffgene, get_cif_lines
-from dis_csp.csp_filter import structure_validity,oxidation_state_validity
-SG_SYM = {spacegroup: Group(spacegroup) for spacegroup in range(1, 231)}
-SG_TO_WP_TO_SITE_SYMM = dict()
-for spacegroup in range(1, 231):
-    SG_TO_WP_TO_SITE_SYMM[spacegroup] = dict()
-    for wp in SG_SYM[spacegroup].Wyckoff_positions:
-        wp_site = str(wp.multiplicity)+wp.letter
-        wp.get_site_symmetry()
-        SG_TO_WP_TO_SITE_SYMM[spacegroup][wp_site] = wp
-#       SG_TO_WP_TO_SITE_SYMM[spacegroup][wp_site][wp] = wp.get_site_symmetry_object().to_one_hot()
-
-latent_space_path = '/home/energy/mahpe/Published_code/Dis-CSP/Decoded_data/z_samples_kde.npy'
+latent_space_path = 'Decoded_data/z_samples_gmm.npy'
+#latent_space_path = 'Decoded_data/z_samples_ran.npy'
+#latent_space_path = 'Decoded_data/z_samples_kde.npy'
+#latent_space_path = 'Decoded_data/z_sample_NewICSD_test.npy'
 model_dir = 'New_Kl5_ICSD_dis_site_middle_KL_element1000_lr_5e-06_epochs_2500_batch_64_test_0.2_val_0.1'
-latent_space_path = 'Decoded_data/z_sample_NewICSD_test.npy'
-cif_save_path = 'Decoded_data/Generated_cif'
 best_model = True
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -76,6 +31,8 @@ vae_eval = VAE(feature_dim, wyckoff_dim, crystal_dim,verbose=False,kernel=kernel
 vae_eval.load_state_dict(vae_dict['model'])
 
 # Decode the latent space samples
+#latent_space_path = 'Decoded_data/z_samples_kde_optimized.npy'
+cif_save_path = 'Decoded_data/Generated_cif'
 print(f"Loading latent space samples from {latent_space_path}")
 z_samples = np.load(latent_space_path)
 
@@ -91,7 +48,7 @@ z_samples = np.load(latent_space_path)
 
 # Get the decoded samples
 save_dict = decode_samples(z_samples,vae_eval,scaler_Y,device='cpu')
-
+print('Decoded samples shape:', len(save_dict['spacegroup']))
 
 # Generate Wyckoff genes
 mixiter = None
@@ -105,64 +62,16 @@ all_wyckoffgenes,sma_int, failed_int = generate_wyckoffgene(save_dict,
                              verbose=False)
 if mixiter is not None:
     print(f"Symmetry Matching Accuracy: {100-sma_int/mixiter*100:.2f}%")
-    print(f"Number of failed items: {failed_int} of {mixiter} processed, Procentage: {failed_int/mixiter*100:.2f}%")
+    print(f"Number of failed items: {failed_int} of {mixiter} processed, Procentage: {100-failed_int/mixiter*100:.2f}%")
 else:
     print(f"Symmetry Matching Accuracy: {100- sma_int/len(save_dict['spacegroup'])*100:.2f}%")
-    print(f"Number of failed items: {failed_int} of {len(save_dict['spacegroup'])} processed, Procentage: {failed_int/len(save_dict['spacegroup'])*100:.2f}%")
+    print(f"Number of failed items: {failed_int} of {len(save_dict['spacegroup'])} processed, Procentage: {100-failed_int/len(save_dict['spacegroup'])*100:.2f}%")
 
-all_cif_lines = []
-cif_lines_wyckoffgene = []
-failed_count = 0
-validity_count = 0
-oxidation_state_count = 0
-validity_count_list = []
-
-maxiter = None
-
-for i in tqdm(range(len(all_wyckoffgenes))):
-    if maxiter is not None:
-        if i >= maxiter:
-            break
-    wyckoffgene = all_wyckoffgenes[i]
-    cif_lines = get_cif_lines(wyckoffgene)
-    try:
-        structure = Structure.from_str(cif_lines,fmt='cif')
-        sga = SpacegroupAnalyzer(structure,symprec=0.1)
-        refined_struc = sga.get_refined_structure()
-        sga = SpacegroupAnalyzer(refined_struc,symprec=0.01)
-        structure = sga.get_symmetrized_structure()
-    except:
-        failed_count +=1
-        continue
-    
-    struc_valid =structure_validity(structure)
-    oxidation_valid = oxidation_state_validity(structure,two_oxidation_state=False,verbose=False)
-
-    if not struc_valid:
-        validity_count += 1
-    if not oxidation_valid:
-        oxidation_state_count += 1
-    # if one of them is not valid, skip the structure
-    if not (struc_valid and oxidation_valid):
-        continue
-    # Add the structure to the list
-    all_cif_lines.append(cif_lines)
-    cif_lines_wyckoffgene.append(wyckoffgene)
-    
-if maxiter is not None:
-    print(f'Failed to parse {failed_count} structures out of {maxiter} Procentage: {failed_count/maxiter*100:.2f}%')
-    print(f'Validity check failed for {validity_count} structures out of {maxiter} Procentage: {validity_count/maxiter*100:.2f}%')
-    print(f'Oxidation state check failed for {oxidation_state_count} structures out of {maxiter} Procentage: {oxidation_state_count/maxiter*100:.2f}%')
-    print(f'Total valid structures: {len(all_cif_lines)} out of {maxiter} Procentage: {len(all_cif_lines)/maxiter*100:.2f}%')
-else:
-    print(f"Failed to parse {failed_count} structures out of {len(all_wyckoffgenes)} Procentage: {failed_count/len(all_wyckoffgenes)*100:.2f}%")
-    print(f"Validity check failed for {validity_count} structures out of {len(all_wyckoffgenes)} Procentage: {validity_count/len(all_wyckoffgenes)*100:.2f}%")
-    print(f"Oxidation state check failed for {oxidation_state_count} structures out of {len(all_wyckoffgenes)} Procentage: {oxidation_state_count/len(all_wyckoffgenes)*100:.2f}%")
-    print(f"Total valid structures: {len(all_cif_lines)} out of {len(all_wyckoffgenes)} Procentage: {len(all_cif_lines)/len(all_wyckoffgenes)*100:.2f}%")
+all_cifs,cifs__wyckoffgene = generate_cif_files(all_wyckoffgenes,maxiter=None,validity_primitive=False,symmetry_analyzer=False, verbose=False, two_oxidation_state=False)
 
 # make a dictionary with the cif lines and the indexes
 cif_dict = {}
-for i, cif_lines in enumerate(all_cif_lines):
+for i, cif_lines in enumerate(all_cifs):
     cif_dict[i] = cif_lines
 
 cif_dict_name = latent_space_path.split('/')[-1].replace('.npy','_cif_dict.json')
@@ -178,8 +87,8 @@ if not os.path.exists(cif_file_path):
     os.makedirs(cif_file_path)
 
 
-for i, cif_lines in enumerate(all_cif_lines):
-    composition = cif_lines_wyckoffgene[i]['structure_pymatgen'].composition
-    cif_file_name = f'{i}_{composition}_spg_{cif_lines_wyckoffgene[i]["spacegroup"]}.cif'
+for i, cif_lines in enumerate(all_cifs):
+    composition = cifs__wyckoffgene[i]['structure_pymatgen'].composition
+    cif_file_name = f'{i}_{composition}_spg_{cifs__wyckoffgene[i]["spacegroup"]}.cif'
     with open(os.path.join(cif_file_path,cif_file_name), 'w') as f:
         f.write(cif_lines)
